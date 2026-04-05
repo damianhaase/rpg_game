@@ -1,4 +1,4 @@
-# Game Rulebook (Draft Version)
+# Game Rulebook
 
 ## Introduction
 
