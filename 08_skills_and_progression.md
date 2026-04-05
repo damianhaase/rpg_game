@@ -35,7 +35,7 @@ If a character attempts to use a skill for which they have no training, they def
 Effective Target = Relevant Attribute − 4
 ```
 
-For example, a hero with DX 12 picking up a great axe but lacking Heavy Weapons skill would treat their effective attack target as 8. The action remains possible; it is simply much harder.
+For example, a hero with **ST 12** picking up a great axe but lacking Axes skill would treat their effective heavy-melee attack target as **8** (12 − 4). The action remains possible; it is simply much harder.
 
 Some skills (Arcane Magic, Surgery) have no useful default and cannot be attempted without at least Novice training.
 

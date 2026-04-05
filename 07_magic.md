@@ -54,7 +54,7 @@ Casting Target = IQ + Spell Skill + Focus Item Bonus − Pressure − Current In
 
 A Drift Event occurs on critical casting failure. Effects are narrative and should be tailored to the scene:
 
-- Time distorts in the local area (one combatant acts twice; another is skipped)
+- Time distorts in the local area (one combatant gains +2 RS and +1 RB for the round; another has RS reduced to 0 until end of round)
 - A random spell from the caster's pool triggers uncontrolled
 - A minor entity or effect from another plane slips through momentarily
 - All characters in Near range gain 1d6 Pressure from the burst of chaotic energy

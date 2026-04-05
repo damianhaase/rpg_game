@@ -168,7 +168,7 @@ Natural DR = ⌊ (CON − 10) / 2 ⌋   (minimum 0)
 
 For every two full points of CON above 10, gain +1 Natural DR. For every two points of CON below 10, Natural DR decreases by 1, to a minimum of 0. Humans and similar creatures have little natural resilience: a CON 12 character has Natural DR 1; a CON 14 character has Natural DR 2; a CON 8 character has Natural DR 0.
 
-Natural DR stacks with armor DR. When damage is inflicted, subtract total DR (natural + armor) from the incoming damage roll, to a minimum of 1. Magic or piercing attacks may ignore some or all DR, as specified by the attack.
+Natural DR stacks with Armor DR. When damage is inflicted, subtract Total DR (Natural DR + Armor DR) from the incoming damage roll, to a minimum of 1. Magic or piercing attacks may ignore some or all DR, as specified by the attack.
 
 ---
 

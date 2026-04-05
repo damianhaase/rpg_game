@@ -25,13 +25,9 @@ The rules are written so that each section explains not just *what* to roll but 
 
 **Skill and Attribute Checks:** Each character has numerical attributes and skills. When acting, roll 3d6 and succeed if the result is ≤ the relevant effective target number (attribute + skill + modifiers). Otherwise the action fails.
 
-**Opposed Rolls and Margins:** In contested situations both parties roll. The result is measured in **margin of success** (effective target − roll). Higher margins win; ties produce partial success. The final hit chance in opposed resolution is:
+**Opposed Rolls and Margins:** In contested situations both parties roll. The result is measured in **margin of success** (effective target − roll). Higher margins win; ties produce partial success. This margin comparison is the canonical resolution method used throughout the rules.
 
-```
-P(hit) = P_attacker × (1 − P_defender)
-```
-
-This formula ensures both parties' skills and modifiers influence every outcome transparently.
+If an implementation wants to display a quick estimated hit chance in a UI, it may show a simplified approximation based on the attacker and defender targets. That approximation is only an aid for presentation; it is not the rules engine.
 
 **Critical Results:** A natural 3 or 4 is a critical success. A natural 18 is a critical failure. A natural 17 is a near-miss failure. Specific consequences are defined section by section.
 
@@ -47,7 +43,7 @@ class Character:
         self.name = name
         self.stats = stats        # ST, DX, CON, IQ, WIL, and derived values
         self.hp = hp
-        self.armor = armor        # Damage Reduction (DR)
+        self.armor = armor        # Armor DR; Natural DR is derived from CON
         self.state = state        # position, commitment, wound, pressure
         self.reaction_budget = 0  # recalculated each round from IQ
 
