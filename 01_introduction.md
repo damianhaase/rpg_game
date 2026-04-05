@@ -105,10 +105,11 @@ This rulebook is split into subject-oriented sections. Each section governs a se
 | File | Contents |
 |------|----------|
 | `01_introduction.md` | This document — design goals, core mechanic, structure |
-| `02_attributes_and_derived_stats.md` | Attributes, derived statistics, formulas |
-| `03_turn_structure_and_actions.md` | Rounds, exposure windows, actions, reactions |
-| `04_combat_resolution.md` | Attack targets, margins, ranged combat, resolution |
+| `02_attributes_and_derived_stats.md` | Attributes, derived statistics, formulas (including natural DR, movement) |
+| `03_turn_structure_and_actions.md` | Rounds, exposure windows, actions, reactions, flanking, grapple, disengage |
+| `04_combat_resolution.md` | Attack targets, margins, ranged combat, worked examples |
 | `05_damage_wounds_conditions.md` | Damage model, wound categories, status effects, pressure |
 | `06_equipment.md` | Weapons, armor, shields, traits, equipment schema |
 | `07_magic.md` | Instability-based magic system |
 | `08_skills_and_progression.md` | Skill ratings, proficiency categories, advancement |
+| `09_encounter_and_exploration.md` | Surprise, rest/recovery, monster stat blocks, light, terrain, victory/defeat |

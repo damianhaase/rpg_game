@@ -135,6 +135,7 @@ Modify EW based on circumstances:
 ## Primary Actions (Intent Options)
 
 - **Move / Reposition:** Change zone, close distance, retreat, circle, gain or leave cover.
+- **Sprint:** Move at +50% distance. Costs 1 FP. Cannot be used while Prone, Grappled, or in Heavy Load. See Section 2 for full restrictions.
 - **Attack:** Strike with weapon, unarmed attack, or offensive spell.
 - **Guard:** Focus on reducing exposure and improving defense this round.
 - **Commit:** Accept a larger exposure window in exchange for more force, damage, or positional pressure.
@@ -142,6 +143,8 @@ Modify EW based on circumstances:
 - **Take Cover:** Move into or improve cover against ranged threats.
 - **Cast:** Begin and resolve a spell according to its casting profile.
 - **Recover:** Reduce pressure, stabilize footing, or regroup after strain.
+- **Disengage:** Attempt to safely leave melee. This is a Slow action (EW 6). The character makes a DX + Athletics roll vs. the opponent's DX + Weapon Skill. On success, the character moves one range band away without triggering a free Counter reaction. On failure, the opponent may immediately take a Counter reaction (1 RB) against the departing character. Forced withdrawal under pressure (e.g., Broken state) uses the same check.
+- **Grapple:** Attempt to seize and restrain an opponent. The attacker makes an opposed ST + Unarmed Skill roll vs. the defender's ST + Unarmed Skill (or DX + Athletics if the defender chooses to writhe free). This is a Standard action (EW 4). On success, both characters enter the Grappled state. While Grappled: neither may move normally; neither may Dodge; both may attempt to break free (Standard action, same opposed roll), strike with small weapons only (–2 to attack), or attempt to throw/pin (Extended action, separate rules may be added). A third party may assist a grappled character's break-free roll by adding their ST as a bonus.
 
 ---
 
@@ -232,6 +235,18 @@ UI shows:
 - Goblin A: Heavy Wound (–1 all physical, wound penalty to EW +1).
 - Hero: 1 RB spent; RS penalty –1 for the rest of this round (already resolved).
 - Goblin B: Now Near, not Engaged. Flanking bonus not yet active.
+
+---
+
+## Flanking
+
+A character is **Flanked** when opponents have them surrounded such that at least one attacker is attacking from the rear or from an angle the defender cannot cover with a single facing.
+
+**Flanking bonus:** Attackers who are Flanking gain **+2** to their Attack Target. The flanked defender loses the ability to Block with a shield against flanking attackers (shields only cover the front facing). Parry remains legal from any angle but at –1.
+
+A character who is Engaged with a single opponent in front and has a second attacker reach them from the side or rear is considered Flanked on any attack from that side or rear attacker.
+
+**Preventing flanking:** A Shift / Step reaction (1 RB) can deny a flanking position if used before the attacker completes their repositioning. This is why Goblin B in the combat example is only Near rather than Engaged after the Hero's Shift.
 
 ---
 

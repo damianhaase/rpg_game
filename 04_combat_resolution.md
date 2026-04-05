@@ -260,6 +260,83 @@ A swordsman declares a heavy Commit attack with a great axe.
 
 ---
 
+## Full Worked Example: Archer vs. Wounded Swordsman
+
+This example demonstrates the complete probability pipeline for a mixed melee-ranged round with active wounds affecting both parties.
+
+**Setup:** Archer A (DX 12, Missile Skill Competent +2, Longbow Acc +2) versus Swordsman B (ST 11, Melee Skill Proficient +4) who has a Heavy Wound from a prior hit (–1 all physical actions; after WB of 1 from CON 12, net penalty is 0 numeric but Sprint is unavailable). Archer A is behind Light Cover (+1 to her defense vs ranged). Both are at Medium range from each other. B is closing.
+
+### Round — Action Declaration
+
+- **Archer A** declares **Aim** (Standard EW 4). She has 1 Aim stack from last round; this brings her to +2 (max default).
+- **Swordsman B** declares **Commit Attack** (standard sword attack in Committed stance; EW = Standard 4 + Committed +2 = 6).
+
+### Reaction Check
+
+A's RS = DX 12 + ⌊IQ 10 / 2⌋ = 12 + 5 = **17**. B's EW = 6. Since 17 ≥ 6, A *could* fire into B's commitment window. But A is currently declaring Aim, not Fire. She chooses not to change her intent — she will continue aiming and fire next round with +2 stacks.
+
+B's RS = DX 9 + ⌊IQ 9 / 2⌋ = 9 + 4 = **13**. A's EW = 4. Since 13 ≥ 4, B could react to A's Aim action. But B is Committed and has already declared an aggressive charge — reacting would mean abandoning the charge (losing Committed bonus). B holds.
+
+### Resolve Phase
+
+- A completes Aim. Aim stack = +2.
+- B completes charge. Now Engaged. Committed state applies next round.
+
+### Round 2 — Action Declaration
+
+- **Archer A** declares **Fire** (EW Standard 4, +2 Aim bonus accumulated).
+- **Swordsman B** declares **Attack** in Committed stance (EW = 4 + 2 = 6).
+
+### Resolution — A fires first (lower EW than B; simultaneous EW, but A fires *into* B's commitment)
+
+**A's Ranged Attack Target:**
+```
+DX (12) + Missile Skill (+2) + Acc (+2) + Range (0, Medium) + Aim Bonus (+2) + Wound Penalty (0) = 18 → clamp to 17
+```
+P_A = ~99% (effectively certain at this range with full aim)
+
+**B's Defense (Dodge, only legal ranged defense; Parry and Block not applicable here):**
+```
+Dodge Target = 9 + DX (9) + Dodge Skill (0) − ranged penalty (−2) − armor penalty (−1 chainmail) = 15
+```
+But B is Committed (+2 EW means –1 to defensive targets):
+```
+Adjusted Dodge Target = 15 − 1 = 14
+```
+P_D = ~91%
+
+**Final hit chance:**
+```
+P(hit) = 0.99 × (1 − 0.91) = 0.99 × 0.09 ≈ 9%
+```
+
+This is low — the defender's high dodge skill and Light Cover make evasion very likely. But A chose to invest two rounds in Aim precisely for this shot; on a hit, B takes a Heavy Wound (or worsens to Severe if already wounded), potentially stopping the charge.
+
+### Resolution — B's Commit Attack (assuming A is not hit this round)
+
+**B's Melee Attack Target (Committed):**
+```
+ST (11) + Melee Skill (+4) + Committed bonus (+1) − Heavy Wound penalty (net 0 after WB) = 16
+```
+P_A = ~98%
+
+**A's Defense (Dodge, melee — no ranged penalty):**
+```
+Dodge Target = 9 + DX (12) + Dodge Skill (0) − Cover (cover doesn't help in melee) − armor penalty (0, no armor) = 21 → clamp to 17
+```
+P_D = ~99%
+
+**Final hit chance:**
+```
+P(hit) = 0.98 × (1 − 0.99) = 0.98 × 0.01 ≈ 1%
+```
+
+A's DX 12 and light armor make her nearly impossible to hit in melee when she is unencumbered. The numbers show why the swordsman needed to close through the ranged fire and not give A two rounds to aim — once Engaged, A's Dodge is formidable but her ranged attack is now penalized at point-blank range (which changes the equation in the next round).
+
+This example shows how melee and ranged tactics use the same pipeline while creating genuinely different risk profiles. The swordsman's best move was to reach A before she finished aiming; A's best move was to fire before he closed.
+
+---
+
 ## UI Output Example
 
 When presenting attack options, display intermediate calculations:

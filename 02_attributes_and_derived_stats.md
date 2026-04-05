@@ -158,6 +158,35 @@ A character may not spend more RB in a round than they possess.
 
 ---
 
+### Natural Damage Resistance (Natural DR)
+
+Constitution provides a small built-in toughness that stacks with armor.
+
+```
+Natural DR = ⌊ (CON − 10) / 2 ⌋   (minimum 0)
+```
+
+For every two full points of CON above 10, gain +1 Natural DR. For every two points of CON below 10, Natural DR decreases by 1, to a minimum of 0. Humans and similar creatures have little natural resilience: a CON 12 character has Natural DR 1; a CON 14 character has Natural DR 2; a CON 8 character has Natural DR 0.
+
+Natural DR stacks with armor DR. When damage is inflicted, subtract total DR (natural + armor) from the incoming damage roll, to a minimum of 1. Magic or piercing attacks may ignore some or all DR, as specified by the attack.
+
+---
+
+### Movement (Basic Move)
+
+Movement speed during a combat round depends on Speed:
+
+```
+Move (metres per round) = SPD × 2
+Move (hexes per round)  = SPD ÷ 1.5  (round up)
+```
+
+A character with SPD 5 can move 10 metres or 4 hexes in one round if they spend their action on movement. Armor, encumbrance, rough terrain, Prone recovery, or being Shaken can reduce movement.
+
+**Sprint:** A character may Sprint as their primary action instead of attacking. Sprinting adds +50% to their Move distance for that round but costs **1 FP**. A character cannot Sprint while Prone, Grappled, carrying Heavy Load, or wearing armor that restricts Sprint (see Section 6). Characters reduced to SPD 0 cannot Sprint.
+
+---
+
 ### Wound Buffer (WB)
 
 Constitution reduces the severity of the death spiral without removing it.
