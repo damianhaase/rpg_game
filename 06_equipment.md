@@ -2,7 +2,7 @@
 
 ## Equipment as Probability Modifiers and Timing Modifiers
 
-Equipment does two things in this system: it shifts target numbers, and it shifts Exposure Windows. A fast weapon (EW –1) makes a character harder to exploit during their attack. Heavy armor (Armor DR +3, armor penalty to RS) makes a character more resistant to damage but more vulnerable to being hit by exposing a smaller defense window. A shield does not just "add to block" — it adjusts the Block Target and provides situational cover against frontal ranged attacks.
+Equipment does two things in this system: it shifts target numbers, and it shifts Exposure Windows. A fast weapon (EW –1) makes a character harder to exploit during their attack. Heavy armor (Armor DR +3, armor penalty to RS) makes a character more resistant to damage but more vulnerable to being hit by exposing a smaller defense window. A shield does not just "add to block" — it adjusts the Block Target and provides situational cover against frontal ranged attacks. Focus items and robes modify magic attempt parameters, exposure, or instability; they do not unlock special abilities.
 
 Every piece of equipment is defined with timing and exposure in mind, not initiative. The old trait language that gave weapons "+1 to initiative" or "–1 to initiative" has been replaced entirely with the Exposure Window model. A *fast* weapon creates a smaller EW. A *heavy* weapon creates a larger EW. These are timing facts, not queue-position bonuses.
 
@@ -118,7 +118,7 @@ Armor = {
 | **flexible** | Reduces penalty when Prone; does not restrict sprint. |
 | **bulky** | Reduces SPD by 1; may restrict Counter. |
 | **heavy_armor** | Applies armor penalty twice if Min ST not met (see Section 2). |
-| **unstable** | Interferes with spellcasting; adds +1 to instability costs. |
+| **unstable** | Interferes with magic attempts; adds +1 to instability costs. |
 
 ---
 
@@ -178,7 +178,7 @@ Item = {
 |---|---|---|
 | Healing Potion (Minor) | 1 | Closes 1 Light Wound; restores ~5 HP. Standard action to use. |
 | Healing Potion (Major) | 1 | Closes 1 Heavy Wound; restores ~10 HP. Slow action to use. |
-| Focus Crystal | 3 | +1 to Casting Target for 1 spell; reduces Instability Cost by 1. |
+| Focus Crystal | 3 | +1 to a Magic Attempt Target for 1 attempt; reduces Instability gain by 1. |
 | Smoke Bomb | 1 | Creates Heavy Cover in Near zone for 2 rounds. Fast action to throw. |
 | Binding Shard | 3 | +2 to a bind or grapple action. |
 
@@ -200,6 +200,6 @@ If using a two-handed weapon, the offhand slot is occupied by that weapon.
 
 1. **Balance bonuses with drawbacks.** For every advantage a piece of gear provides, incorporate a cost or limitation. This keeps scenarios from being trivialised by single items.
 2. **Keep modifiers small.** Equipment bonuses should typically range from ±1 to ±3 to fit within the 3d6 bell curve.
-3. **Emphasize traits.** Traits expand the tactical toolkit by granting new options or enabling creative play rather than just increasing numbers.
+3. **Emphasize traits.** Traits expand the tactical toolkit by modifying parameters, timing, and positioning rather than by granting discrete abilities.
 4. **Narrative consistency.** Gear should fit the game's world and tone. Unusual items should enhance, rather than derail, the story.
 5. **Timing over queue.** All weapon traits affecting speed are expressed as EW modifiers, not initiative bonuses.

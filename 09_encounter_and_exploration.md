@@ -82,11 +82,11 @@ A long rest requires shelter, safety, and either food/water or a character willi
 
 ### Full Recovery (8 hours sleep)
 
-- HP fully restored (unless a Severe or Critical Wound is present — those require days of recovery or magic)
+- HP fully restored (unless a Severe or Critical Wound is present — those require days of recovery or a strong Vital attempt)
 - All Wounds drop one category (Severe → Heavy, Heavy → Light, Light → healed)
 - All FP and Pressure fully restored
 
-Critical Wounds do not heal overnight without medical care or magic healing.
+Critical Wounds do not heal overnight without medical care or a Vital attempt.
 
 ---
 
@@ -103,7 +103,7 @@ An encounter ends when:
 
 The party is **defeated** when all player characters are simultaneously downed or incapacitated. If at least one PC remains standing, the encounter continues — even if badly wounded.
 
-**Being Downed:** A character at 0 HP is unconscious and dying. Each round they remain at 0 HP, roll 3d6 ≤ CON. Failure means HP decreases by 1 further. Reaching –CON in HP means death. A successful First Aid action (Standard EW from an ally) stabilizes the character (stops HP loss; they remain unconscious until treated further or given a Healing potion).
+**Being Downed:** A character at 0 HP is unconscious and dying. Each round they remain at 0 HP, roll 3d6 ≤ CON. Failure means HP decreases by 1 further. Reaching –CON in HP means death. A successful First Aid action (Standard EW from an ally) stabilizes the character (stops HP loss; they remain unconscious until treated further or given a healing potion or a Vital attempt).
 
 **Capture vs. Death:** The GM may rule that downed characters are captured rather than killed, particularly when enemies have tactical reasons to take prisoners. This is a narrative decision.
 
@@ -187,8 +187,8 @@ Armor:   Exposed bone, DR 1 vs slashing, DR 0 vs blunt (blunt weapons bypass)
 Weapon:  Rusty Sword — 1d6+1, Parry +1
 Skills:  Swords Novice (+0)
 Traits:  Undead — immune to Pressure and fear effects; WIL-based resistances
-         always succeed; does not bleed; cannot be healed by medicine; magic
-         healing requires a Warding/Necromancy spell.
+         always succeed; does not bleed; cannot be healed by medicine; Vital
+         restoration requires a Vital attempt shaped through death-aware practice.
          Slow Mind — RB is capped at 2; cannot Counter.
 Tactics: Skeletons advance and attack without tactics. They do not flee.
 ```
@@ -245,7 +245,7 @@ Traps are detected with a Perception check (see above). Difficulty depends on ho
 
 The following is a minimal reward structure for test play. Full advancement rules will be defined in a later supplement.
 
-- **Encounter cleared:** Each participant marks one skill that was used meaningfully under pressure. (Used for advancement; see Section 8.)
+- **Encounter cleared:** Each participant marks one skill or spell that was used meaningfully under pressure. (Used for advancement; see Section 8.)
 - **Objective completed:** All participants recover FP fully immediately (adrenaline fading; equivalent to a Short Rest).
 - **Treasure:** Equipment found may be looted and used immediately if the character meets Min ST requirements.
 - **Level-up trigger:** After 3–5 encounters (GM's discretion), players may increase one skill rank or gain +1 to one attribute. This is deliberately light — full advancement will be codified later.

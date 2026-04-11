@@ -6,7 +6,7 @@ The core insight of this combat system is that *time is not a queue — it is a 
 
 This model replaces visible initiative entirely. There is no "who goes first" roll. Instead, the question is: *does this character have enough RS to act during that EW, and do they have RB left to spend?* The answer is deterministic — no die roll — which makes timing legible and predictable. Players can look at an opponent's commitment state and know whether a Counter is legal before they commit their own budget.
 
-The 3d6 probability engine governs whether attacks hit and whether defenses succeed, but the timing layer governs which actions are even eligible to interact. This two-layer design — timing gate first, probability roll second — keeps the system coherent across melee, ranged, and magical combat.
+The 3d6 probability engine governs whether attacks hit and whether defenses succeed, but the timing layer governs which actions are even eligible to interact. This two-layer design — timing gate first, probability roll second — keeps the system coherent across melee, ranged, and magic attempts.
 
 ---
 
@@ -21,14 +21,14 @@ Each character's state is described by two orthogonal properties.
 - **Behind Cover:** Partial or full cover; incoming attacks have lower hit probability; leaving cover costs movement.
 - **Engaged:** In melee contact with at least one opponent.
 - **Near:** Within reaction range but not yet in contact.
-- **Far:** Outside immediate reaction range; ranged or magical attacks typically required.
+- **Far:** Outside immediate reaction range; ranged or magic attempts typically required.
 
 ### Commitment State
 
 - **Balanced:** Standard readiness. No special bonus or penalty. Normal defensive options available.
 - **Guarded:** Defensive posture. Smaller Exposure Window, better defensive reactions, weaker offense.
 - **Committed:** Aggressive posture. Larger Exposure Window, stronger offense, weaker defense.
-- **Extended:** In the middle of a long action (heavy swing, drawn bow release, complex spell). Easiest to punish with reactions.
+- **Extended:** In the middle of a long action (heavy swing, drawn bow release, complex magic attempt). Easiest to punish with reactions.
 
 The old "momentum/pressure state" language maps onto Commitment State. Pressure still exists as a separate morale and stress track (see Section 5).
 
@@ -44,7 +44,7 @@ Each round proceeds in five stages:
 
 Each combatant declares one primary intent.
 
-Examples: move, attack, guarded defense, aim, cast, disengage, commit attack, take cover.
+Examples: move, attack, guarded defense, aim, magic attempt, disengage, commit attack, take cover.
 
 ### 2. Commit Phase
 
@@ -100,7 +100,7 @@ Use these categories unless a weapon, spell, or trait changes them:
 | **Fast** | 2 | Jab, quick step, short dodge, snap shot at point-blank range. |
 | **Standard** | 4 | Normal attack, normal movement, standard bow shot, standard guard. |
 | **Slow** | 6 | Heavy attack, aimed shot, long disengage, forceful shove. |
-| **Extended** | 8 | Powerful spell, reload, brace-and-fire, all-out swing, multi-step maneuver. |
+| **Extended** | 8 | Powerful magic attempt, reload, brace-and-fire, all-out swing, multi-step maneuver. |
 
 ---
 
@@ -117,7 +117,7 @@ Modify EW based on circumstances:
 | Severe wound | +1 |
 | Prone recovery | +2 |
 | Light cover while shooting (awkward angle) | +1 |
-| Spell instability surge | +1 or more |
+| Instability surge | +1 or more |
 
 ---
 
@@ -136,12 +136,12 @@ Modify EW based on circumstances:
 
 - **Move / Reposition:** Change zone, close distance, retreat, circle, gain or leave cover.
 - **Sprint:** Move at +50% distance. Costs 1 FP. Cannot be used while Prone, Grappled, or in Heavy Load. See Section 2 for full restrictions.
-- **Attack:** Strike with weapon, unarmed attack, or offensive spell.
+- **Attack:** Strike with weapon, unarmed attack, or offensive spell-mode attempt.
 - **Guard:** Focus on reducing exposure and improving defense this round.
 - **Commit:** Accept a larger exposure window in exchange for more force, damage, or positional pressure.
-- **Aim:** Improve a later ranged or spell attack at the cost of time and exposure.
+- **Aim:** Improve a later ranged or magic attempt at the cost of time and exposure.
 - **Take Cover:** Move into or improve cover against ranged threats.
-- **Cast:** Begin and resolve a spell according to its casting profile.
+- **Magic Attempt:** Begin and resolve a spell-mode action using the same resolution system described in Section 1 and the attempt rules in Section 7.
 - **Recover:** Reduce pressure, stabilize footing, or regroup after strain.
 - **Disengage:** Attempt to safely leave melee. This is a Slow action (EW 6). The character makes a DX + Athletics roll vs. the opponent's DX + Weapon Skill. On success, the character moves one range band away without triggering a free Counter reaction. On failure, the opponent may immediately take a Counter reaction (2 RB) against the departing character. Forced withdrawal under pressure (e.g., Broken state) uses the same check.
 - **Grapple:** Attempt to seize and restrain an opponent. The attacker makes an opposed ST + Unarmed Skill roll vs. the defender's ST + Unarmed Skill (or DX + Athletics if the defender chooses to writhe free). This is a Standard action (EW 4). On success, both characters enter the Grappled state. While Grappled: neither may move normally; neither may Dodge; both may attempt to break free (Standard action, same opposed roll), strike with small weapons only (–2 to attack), or attempt to throw/pin (Extended action, separate rules may be added). A third party may assist a grappled character's break-free roll by adding their ST as a bonus.

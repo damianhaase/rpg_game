@@ -4,7 +4,7 @@
 
 Every number on a character sheet eventually becomes part of a target number that is compared to a 3d6 roll. Attributes are the raw inputs; derived statistics are the intermediate results; target numbers and modifiers are the outputs that enter the probability curve.
 
-The attribute design deliberately distributes combat roles so that no single stat dominates every phase. A character with high Dexterity is agile and precise, but a character with high Strength hits harder and tanks more, and a character with high Intelligence reacts faster and casts more reliably. Each attribute owns a distinct region of the probability calculation. This means that raising any one attribute meaningfully shifts probabilities in one area without making every other area trivial.
+The attribute design deliberately distributes combat roles so that no single stat dominates every phase. A character with high Dexterity is agile and precise, but a character with high Strength hits harder and tanks more, and a character with high Intelligence reacts faster and handles magic attempts more reliably. Each attribute owns a distinct region of the probability calculation. This means that raising any one attribute meaningfully shifts probabilities in one area without making every other area trivial.
 
 Derived statistics translate raw attributes into bounded, gameplay-facing values. Small increments (+1, +2) at the attribute level produce meaningful but not runaway changes in success probability, which is the intended behaviour of the 3d6 bell curve.
 
@@ -17,7 +17,7 @@ These attributes are defined so that no single stat dominates all phases of comb
 - **Strength (ST):** Force, leverage, and committed physical power. ST governs heavy weapon use, shield blocking, damage bonus, carrying capacity, and other force-based actions.
 - **Dexterity (DX):** Precision, footwork, and bodily execution speed. DX governs finesse attacks, dodging, fine motor actions, and movement-based reactions.
 - **Constitution/Endurance (CON):** Toughness, stamina, pain tolerance, and physical resilience. CON governs hit points, fatigue, natural damage resistance, and reduction of wound penalties.
-- **Intelligence (IQ):** Awareness, processing speed, magical control, and tactical bandwidth. IQ governs spellcasting, response speed, reaction budget, and perception-driven combat awareness.
+- **Intelligence (IQ):** Awareness, processing speed, magical control, and tactical bandwidth. IQ governs magic-attempt reliability, response speed, reaction budget, and perception-driven combat awareness.
 - **Will/Morale (WIL):** Resistance to fear, intimidation, panic, and mental pressure.
 
 ---
@@ -28,7 +28,6 @@ The system uses derived values to turn the core attributes into consistent gamep
 
 - **Health Points (HP):** Based on Constitution.
 - **Fatigue Points (FP):** Based on Constitution.
-- **Magic Points (MP):** Based on Intelligence.
 - **Pressure Resistance (PR):** Based on Will and Constitution.
 - **Speed (SPD):** Based on Dexterity and Constitution.
 - **Load:** Based on Strength.
@@ -92,17 +91,13 @@ This is the default health model. Some variants may average ST and CON, but the 
 FP = CON × 2
 ```
 
-Fatigue measures physical and mental exertion. Sprinting, all-out defense, wrestling, and spellcasting may cost FP. Fatigue recovers at 1 FP per minute of complete rest.
+Fatigue measures physical and mental exertion. Sprinting, all-out defense, wrestling, and other physically or mentally demanding actions may cost FP. Fatigue recovers at 1 FP per minute of complete rest.
 
 ---
 
-### Magic Points (MP)
+### No Mana Pool
 
-```text
-MP = IQ × 2
-```
-
-Magic remains primarily an Intelligence-based system. Will, talents, or traits may modify MP.
+Magic does not use mana, spell slots, or Magic Points. Intelligence affects magic through target numbers, instability handling, Response Speed, and Reaction Budget rather than through a separate expendable resource pool.
 
 ---
 
@@ -154,7 +149,7 @@ Reaction costs:
 - Block: 1 RB
 - Shift / Step / minor reposition: 1 RB
 - Counter: 2 RB
-- Complex magical interrupt: usually 2 RB or more
+- Complex interrupt against a magic attempt: usually 2 RB or more
 
 A character may not spend more RB in a round than they possess.
 

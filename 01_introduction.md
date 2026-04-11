@@ -4,7 +4,7 @@
 
 This rulebook governs a tactical fantasy role-playing game. Every mechanical rule in this system ultimately reduces to a single probability question: *what is the chance this action succeeds given current conditions?* Understanding that question is understanding the game.
 
-The probability model is a **3d6 bell curve**. Rolling three six-sided dice and summing the result produces values from 3 to 18, with the mass of outcomes clustered around 10–11. This distribution means that moderate skill bonuses (+1 or +2) have significant impact near the centre of the curve, while extreme values (3 or 18) are genuinely rare. Combat, spellcasting, social interaction, and skill checks all flow through this same engine, so every lesson a player learns in one context applies across the whole game.
+The probability model is a **3d6 bell curve**. Rolling three six-sided dice and summing the result produces values from 3 to 18, with the mass of outcomes clustered around 10–11. This distribution means that moderate skill bonuses (+1 or +2) have significant impact near the centre of the curve, while extreme values (3 or 18) are genuinely rare. Combat, magic attempts, social interaction, and skill checks all flow through this same engine, so every lesson a player learns in one context applies across the whole game.
 
 The rules are written so that each section explains not just *what* to roll but *why* the formula is shaped the way it is. Each section opens with a preamble describing how that subject plugs into the probability system and what design theory governs it.
 
@@ -30,6 +30,53 @@ The rules are written so that each section explains not just *what* to roll but 
 If an implementation wants to display a quick estimated hit chance in a UI, it may show a simplified approximation based on the attacker and defender targets. That approximation is only an aid for presentation; it is not the rules engine.
 
 **Critical Results:** A natural 3 or 4 is a critical success. A natural 18 is a critical failure. A natural 17 is a near-miss failure. Specific consequences are defined section by section.
+
+---
+
+## Magic as Interaction with Reality
+
+Magic is an attempt to impose change on reality using a trained method called a **spell**. It is resolved through the same probability, timing, exposure, and margin systems as every other action.
+
+Magic is not a separate subsystem. It is a type of action, like a melee strike, a movement burst, or a social push. A magic attempt still passes through the same shared structure:
+
+- commitment
+- timing
+- exposure
+- 3d6 resolution
+
+Section 7 expands this into spell profiles and instability rules, but the core loop remains the one defined here.
+
+---
+
+## Named Spells as Modes of Action
+
+Spell names define **approach**, not fixed abilities. A player does not unlock a discrete "Fireball" or "Teleport" entry. They choose a spell mode and declare intent.
+
+The canonical spell set is:
+
+- **Force**
+- **Fire**
+- **Veil**
+- **Rend**
+- **Bind**
+- **Shift**
+- **Vital**
+- **Fracture**
+
+Each spell describes the way a practitioner interacts with reality. Outcome still depends on intent, timing, scale, precision, resistance, and the final 3d6 result. The rules therefore avoid fixed spell lists and predefined effect menus in favor of intent-driven resolution.
+
+---
+
+## Intent -> Resolution Flow
+
+All actions, including magic attempts, follow the same pipeline:
+
+1. The player declares intent and, if relevant, the spell being used.
+2. The system evaluates proficiency, scale, precision, speed, and opposition.
+3. The action resolves through a 3d6 roll and an outcome band.
+4. The game applies the resulting effect, instability gain, and exposure change.
+
+Combat, ranged actions, and magic attempts are all variations on this same loop.
 
 ---
 
@@ -106,6 +153,6 @@ This rulebook is split into subject-oriented sections. Each section governs a se
 | `04_combat_resolution.md` | Attack targets, margins, ranged combat, worked examples |
 | `05_damage_wounds_conditions.md` | Damage model, wound categories, status effects, pressure |
 | `06_equipment.md` | Weapons, armor, shields, traits, equipment schema |
-| `07_magic.md` | Instability-based magic system |
-| `08_skills_and_progression.md` | Skill ratings, proficiency categories, advancement |
+| `07_magic.md` | Attempt-driven magic, spell profiles, instability, combat integration |
+| `08_skills_and_progression.md` | Skill ratings, character creation, spell proficiency, advancement |
 | `09_encounter_and_exploration.md` | Surprise, rest/recovery, monster stat blocks, light, terrain, victory/defeat |

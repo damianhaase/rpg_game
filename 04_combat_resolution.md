@@ -13,7 +13,7 @@ Every combat action follows the same six-step pipeline:
 5. Compare margins.
 6. Apply damage, pressure, wounds, and state changes.
 
-This means that a player who understands how to resolve a sword attack already understands how to resolve an arrow or a fireball. The numbers differ; the structure does not.
+This means that a player who understands how to resolve a sword attack already understands how to resolve an arrow or a Force, Fire, or Bind attempt. The numbers differ; the structure does not.
 
 ---
 
@@ -80,10 +80,10 @@ Ranged attacks use Dexterity and missile skills. They apply range band modifiers
 ### Magic
 
 ```
-Casting Target = IQ + Spell Skill + Focus Bonus + State Modifiers − Instability Penalties
+Magic Attempt Target = IQ + Spell Proficiency + Focus Bonus − Parameter Difficulty + State Modifiers − Instability Penalties
 ```
 
-See Section 7 (Magic) for the full spell resolution model.
+See Section 7 (Magic) for the full attempt-driven magic model. Magic uses the same core resolution system described in Section 1.
 
 ---
 
@@ -112,7 +112,7 @@ Against **melee**, the defender may choose Dodge, Parry, or Block if legally ava
 
 Against **ranged**, Dodge is weaker (–2 default) and cover is usually more important than parry or block. Parry is generally not legal against ordinary projectiles unless a special ability, weapon property, or explicit rule allows it. Block may apply against large slow missiles, thrown weapons, or very favorable shield angles.
 
-Against **magic**, the spell description determines whether the defense is Dodge, cover, PR, WIL, IQ, or another listed resistance.
+Against **magic**, the declared intent, spell profile, and attempt parameters determine whether the defense is Dodge, cover, PR, WIL, IQ, CON, or another listed resistance.
 
 ---
 
@@ -135,6 +135,20 @@ Both attacker and defender roll 3d6. Outcomes:
 Heavy weapons gain a reliability mechanic. If a heavy melee attack misses by only 1 or 2, it may still deal **glancing force damage** equal to the attacker's DB, reduced by DR as normal, if the defender did not Dodge cleanly out of reach and the fiction supports partial contact.
 
 This makes ST-based fighters feel forceful without giving them the same precision profile as DX fighters.
+
+---
+
+## Magic in Combat
+
+Magic uses the same timing, exposure, interruption, and opposed-resolution structure as every other combat action.
+
+- **Force** and **Fracture** can interrupt actions, spoil guards, or break prepared positions.
+- **Bind** and **Rend** can create exposure by pinning movement, worsening wound state, or forcing Off-Balance results.
+- **Veil** can reduce targeting reliability by imposing concealment, line-of-sight distortion, or perception uncertainty.
+- **Shift** changes range, angle, or cover state using the same movement and positioning language as mundane actions.
+- **Vital** stabilizes, closes, or downgrades wounds through the same action window and interruption rules as any other attempt.
+
+Magic therefore requires no special combat loop. It enters the same resolution pipeline described in Section 1 and uses the same timing rules described in Section 3.
 
 ---
 
@@ -289,7 +303,7 @@ B's RS = DX 9 + ⌊IQ 9 / 2⌋ = 9 + 4 = **13**. A's EW = 4. Since 13 ≥ 4, B c
 
 ### Round 2 — Action Declaration
 
-- **Archer A** declares **Fire** (EW Standard 4, +2 Aim bonus accumulated).
+- **Archer A** declares **Shoot** (EW Standard 4, +2 Aim bonus accumulated).
 - **Swordsman B** declares **Attack** in Committed stance (EW = 4 + 2 = 6).
 
 ### Resolution — Archer A's Shot
@@ -352,7 +366,7 @@ This example shows how melee and ranged tactics use the same pipeline while crea
 
 When presenting attack options, display intermediate calculations:
 
-**Fire at Goblin (Medium Range)**
+**Shoot at Goblin (Medium Range)**
 - Ranged Attack Target: 14
 - Goblin's Dodge Target: 10 (with –2 ranged penalty)
 - Cover bonus (Medium): +2 to the defender's effective defense target

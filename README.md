@@ -19,6 +19,8 @@ Core design pillars:
 - simultaneous rounds with no visible initiative
 - intent -> exposure -> reaction -> resolution
 - exposure windows (EW), response speed (RS), and reaction budget (RB)
+- attempt-driven magic using named spell modes rather than discrete spell lists
 - ST-based heavy melee, DX-based finesse melee and ranged attacks
+- character identity shaped through reliable profiles, techniques, edges, and weaknesses
 - wounds filtered by Wound Buffer (WB)
 - pressure as a distinct system

@@ -1,18 +1,18 @@
-# Game Rulebook — Section 8: Skills and Progression
+# Game Rulebook — Section 8: Skills, Character Creation, and Progression
 
-## Skills as Probability Amplifiers
+## Skills as Reliability, Not Permission
 
-Attributes define the raw floor of a character's capability. Skills define how much of that capability is trained and reliable. In the 3d6 system, each point of effective skill raises the success probability by a meaningful amount — roughly 5–10% in the middle of the curve where most characters operate. A character who has trained extensively is not just "better in flavour"; they have a statistically distinct success profile on every relevant roll.
+Attributes define raw capability. Skills define how reliably that capability becomes action. In this system, progression is primarily about becoming more consistent under pressure, not about unlocking whole new action categories.
 
-The design intentionally weights skill at least as highly as raw attributes, following the GURPS and TFT principle that a focused practitioner outperforms a raw talent. A character with DX 10 and Sword skill +6 has an effective attack target of 16, which is near the ceiling of the achievable range. That same character with DX 14 and no training has a target of 10 — barely competent. This gap makes character creation choices meaningful and makes progression feel substantial.
+That principle applies to mundane action and magic equally. A practiced swordsman hits more reliably than an untrained brawler. A practiced Force user shapes motion more reliably than someone making a desperate first attempt. The core loop does not change.
 
-Skills also function as the primary lever for long-term character growth. Attribute increases are rare and expensive; skill increases are the normal reward for play and experience. This means the probability improvements from advancement are legible: going from Sword +4 to Sword +6 is a concrete, calculable change in success rate that players can see and value.
+Magic uses the same resolution system described in Section 1. Spell proficiency changes instability, exposure cost, and outcome consistency, not whether the player is allowed to try.
 
 ---
 
-## Skill Ratings
+## General Skill Ratings
 
-Characters have skill ratings corresponding to broad categories. A skill rating represents training and familiarity and is expressed as a bonus added to the relevant attribute to form an Effective Target Number.
+Most mundane skills use the standard bonus ladder below.
 
 | Rating | Label | Bonus |
 |---|---|---|
@@ -25,25 +25,34 @@ Characters have skill ratings corresponding to broad categories. A skill rating 
 
 **Effective Skill = Relevant Attribute + Skill Bonus + Equipment Bonus + Circumstance Modifiers**
 
----
-
-## Defaulting When Untrained
-
 If a character attempts to use a skill for which they have no training, they default to:
 
-```
+```text
 Effective Target = Relevant Attribute − 4
 ```
 
-For example, a hero with **ST 12** picking up a great axe but lacking Axes skill would treat their effective heavy-melee attack target as **8** (12 − 4). The action remains possible; it is simply much harder.
+For example, a hero with **ST 12** picking up a great axe but lacking Axes skill would treat their effective heavy-melee attack target as **8**.
 
-Some skills (Arcane Magic, Surgery) have no useful default and cannot be attempted without at least Novice training.
+---
+
+## Spell Proficiency Tiers
+
+Spell modes do not use the mundane +0/+2/+4 ladder. They use tiers that explicitly change reliability, instability, and exposure.
+
+Any spell can be attempted at any time. Proficiency affects how dangerous and consistent that attempt is.
+
+| Tier | Magic Attempt Modifier | Instability | Exposure / Outcome Effect |
+|---|---|---|---|
+| **Untrained** | –4 | +2 instability | +1 EW and downgrade the result by one band |
+| **Practiced** | –1 | +1 instability | Clean success requires margin 4+; lower successes become success with distortion |
+| **Reliable** | +0 | baseline instability | Use the normal outcome bands from Section 7 |
+| **Mastered** | +1 | –1 instability | May reduce EW by 1 or improve the result by one band on a success by 2+ |
+
+This is the main answer to magic progression. Characters do not unlock new spells as discrete abilities. They become more reliable, less exposed, and less distortion-prone when using them.
 
 ---
 
 ## Skill Categories
-
-Skills are grouped into five broad categories. Within each category, specific skills share the same relevant attribute and default.
 
 ### Combat Skills
 
@@ -58,7 +67,7 @@ Skills are grouped into five broad categories. Within each category, specific sk
 | Crossbows | DX | Light and heavy crossbows |
 | Thrown | DX | Daggers, javelins, rocks |
 | Shield | ST | Shield Block reactions |
-| Dodge | DX | Dodge reactions (may be trained separately) |
+| Dodge | DX | Dodge reactions |
 | Unarmed | ST or DX | Punching, grappling, wrestling |
 
 ### Physical Skills
@@ -74,7 +83,7 @@ Skills are grouped into five broad categories. Within each category, specific sk
 
 | Skill | Relevant Attribute | Notes |
 |---|---|---|
-| Arcane Lore | IQ | Understanding spells and magical phenomena |
+| Arcane Lore | IQ | Understanding magic attempts, instability, and strange effects |
 | Tactics | IQ | Planning, ambush, terrain awareness |
 | Medicine | IQ | First aid, field treatment, diagnosis |
 | Perception | IQ | Noticing hidden threats, traps, and details |
@@ -88,16 +97,18 @@ Skills are grouped into five broad categories. Within each category, specific sk
 | Leadership | WIL | Rally, morale support |
 | Deception | IQ | Lying, disguise, misdirection |
 
-### Arcane Skills (Magic Disciplines)
+### Spell Proficiencies
 
-| Skill | Relevant Attribute | Notes |
+| Spell | Relevant Attribute | Notes |
 |---|---|---|
-| Elementalism | IQ | Fire, air, earth, water spells |
-| Necromancy | IQ | Death, undead, life-force spells |
-| Warding | IQ | Protective and barrier spells |
-| Divination | IQ | Sight, detection, knowledge spells |
-| Healing | IQ | Restorative and curative spells |
-| Binding | IQ | Restraint, control, compulsion spells |
+| Force | IQ | Motion, pressure, impact |
+| Fire | IQ | Heat, ignition, denial |
+| Veil | IQ | Concealment, masking, uncertainty |
+| Rend | IQ | Tearing, weakening, exposed flaws |
+| Bind | IQ | Restraint, anchoring, holding |
+| Shift | IQ | Repositioning, displacement, changed angle |
+| Vital | IQ | Stabilization, restoration, bodily continuity |
+| Fracture | IQ | Disruption, breakage, interruption |
 
 ---
 
@@ -105,54 +116,201 @@ Skills are grouped into five broad categories. Within each category, specific sk
 
 Social interactions use the same 3d6 ≤ target mechanic as combat:
 
-```
+```text
 Social Action Target = Relevant Attribute + Social Skill + Situational Modifiers
 ```
 
-Opposed social checks use the same margin-comparison model as combat. The "defender" rolls against their own WIL or IQ to resist.
-
-Pressure and wound states can affect social actions: a character who is Shaken or Broken suffers the same penalties to social skills as to combat skills.
+Opposed social checks use the same margin-comparison model as combat. Pressure and wound states affect social actions just as they affect combat and magic attempts.
 
 ---
 
-## Assigning Skills at Character Creation
+## Character Creation as Profile Shaping
 
-Starting characters receive a limited pool of skill points to distribute. A suggested starting allocation:
+Character creation is not primarily a point-buy for raw stats. It is the process of shaping a behavioral profile under constraints.
 
-- **Novice characters:** 4 skill points total. One skill at Competent (+2), two at Novice (+0).
-- **Experienced characters:** 6–8 skill points. Two skills at Proficient (+4), one at Competent (+2).
-- **Veterans:** 10+ skill points. One skill at Expert (+6), others distributed.
+Recommended baseline:
 
-Each rank increase costs 1 point (Novice → Competent → Proficient → Expert → Master). Some high-tier skill ranks may require minimum attribute levels or training from a teacher.
+1. Start from the campaign baseline attributes.
+2. Allocate **6 profile points** across the four dimensions below.
+3. No dimension may start above **3**.
+4. Use the chosen dimension ratings to guide starting skills, spell proficiencies, edges, and weaknesses.
+
+### Character Profile Dimensions
+
+| Dimension | What It Shapes | Practical Starting Effect |
+|---|---|---|
+| **Physical Execution** | Bodily force, weapon control, movement confidence | Supports combat and physical skills, heavy weapon use, and decisive movement |
+| **Magical Control** | Stability and clarity when shaping reality | Supports Reliable spells, techniques, and lower-distortion attempts |
+| **Cognitive Control** | Timing, awareness, reaction discipline | Supports RS, perception, tactical reads, and interruption play |
+| **Risk Tolerance** | Willingness to operate while exposed or unstable | Supports Committed actions, reactive play, and accepting downside for tempo |
+
+The player is not selecting a class or rigid archetype. They are defining where the character is reliable and where the character is risky.
+
+Recommended conversion rules:
+
+- Each **Physical Execution** point grants one pick: `+1 ST`, `+1 DX`, or raise one Combat/Physical skill by one step.
+- Each **Magical Control** point grants one pick: raise one spell proficiency by one tier, gain one extra technique, or reduce instability by 1 on the first attempt of a chosen Reliable spell each scene.
+- Each **Cognitive Control** point grants one pick: `+1 IQ`, `+1` to Perception or Tactics, or `+1 RS` in the first round of each encounter.
+- Each **Risk Tolerance** point grants one pick: `+1` on Committed or Extended actions, ignore the first point of pressure on a risky action each scene, or qualify for one extra Edge slot.
+
+If a campaign wants tighter numbers, keep the same structure and reduce the total profile points from 6 to 4.
 
 ---
 
-## Skill Advancement
+## Linked Tradeoffs
 
-Characters improve skills through play. The recommended advancement model:
+Profile shaping works only if emphasis creates real constraints. Use the following linked trade rules during character creation:
 
-1. After a session in which a skill was used and challenged (a roll under pressure, not just a routine task), mark that skill.
-2. During downtime, roll 3d6 against the skill's current Effective Target. If the roll **exceeds** the target (i.e., fails the check), the skill increases by one rank. Success means the character is performing within their current ability; failure means they encountered their limits and learned from them.
-3. Attribute increases are rare — awarded for major milestones, powerful blessings, or extended training sequences.
+| Emphasis | Typical Gain | Required Tradeoff |
+|---|---|---|
+| **High commitment / output** | +1 damage or stronger force on a chosen action pattern | That pattern takes **+1 EW** |
+| **High magical control** | –1 instability on one chosen Reliable spell | Large-scale or exact attempts with that spell count one speed category slower |
+| **High cognitive control** | +1 RS or +1 to Perception/Tactics reads | Direct output from Force, Fire, or Rend is reduced by 1 when using that timing focus |
+| **High risk tolerance** | Ignore the first point of instability or pressure on a chosen attempt each scene | Defense targets are **–1** while Committed or Extended |
+
+These are not optional flavor tags. They are the main mechanism that prevents optimized builds from becoming flatly better in every dimension.
 
 ---
 
-## Provisional Nature
+## Reliable vs. Unstable Zones
 
-These rules are intentionally lightweight for the first implementation. As the full character-creation system matures, skills will be expanded beyond combat to include more social, environmental, and investigative options. The principle of using the same 3d6 ≤ target resolution for every skill check is fixed; the specific skill list and advancement costs are subject to playtesting refinement.
+At character creation, choose **1 or 2 spells** as **Reliable**.
+
+- **Reliable spells** start at the Reliable tier.
+- All other spells start **Untrained**, which is the character's unstable zone.
+
+Reliable spells resolve with normal instability and outcome bands. Untrained spells remain attemptable, but they gain extra instability, create extra exposure, and produce less consistent outcomes.
+
+This is the key distinction at the start of play: what the character can attempt is broad; what the character can do cleanly is narrow.
 
 ---
 
-## Skill Proficiency Summary
+## Starting Techniques
 
-| Effective Target (Attr + Skill) | Success Probability (3d6) |
+For each Reliable spell, select **1 or 2 techniques**.
+
+A technique is a common, practiced pattern that reduces difficulty under specific conditions. It does not define a fixed outcome.
+
+Default rule:
+
+- A technique grants **–1 Parameter Difficulty** when used in its practiced situation.
+- A technique does not bypass resistance, remove instability, or change the core resolution loop.
+
+Suggested starting techniques:
+
+| Spell | Techniques |
 |---|---|
-| 6 | ~9% |
-| 8 | ~26% |
-| 10 | ~50% |
-| 12 | ~74% |
-| 14 | ~91% |
-| 16 | ~98% |
-| 17 | ~99%+ |
+| **Force** | **Push** (moderate scale, low precision), **Deflect** (reactive timing) |
+| **Fire** | **Flash** (short, bright burst), **Line Burn** (direct pressure across a lane) |
+| **Veil** | **Blur** (personal concealment), **Mask** (disguise or false read) |
+| **Rend** | **Shear** (open a weak point), **Expose** (worsen an existing wound or armor gap) |
+| **Bind** | **Snare** (hold feet or space), **Hold** (lock a limb or route) |
+| **Shift** | **Step** (short reposition), **Exchange Angle** (change line, cover, or flank) |
+| **Vital** | **Seal** (close a wound), **Rouse** (stabilize and restore basic function) |
+| **Fracture** | **Jolt** (interrupt concentration), **Break Ward** (disrupt structure or protection) |
 
-These probabilities illustrate why skill matters. The difference between a Novice fighter (effective target ~10, 50% success) and an Expert fighter (effective target ~16, 98% success) is decisive over the course of a combat encounter. Players who invest in a focused skill have a statistical reason to feel the difference.
+Techniques exist to create recognizable habits, not to build a long skill tree.
+
+---
+
+## Edges
+
+Each starting character chooses **1 to 3 Edges**.
+
+Edges are small rule modifications tied to system interactions. They are not classes and they are not permission gates.
+
+Examples:
+
+- **Reactive Hand:** –1 instability on reaction-based magic attempts.
+- **Clean Entry:** –1 EW on the first action taken in an encounter.
+- **Early Read:** +1 RS when reacting to an Extended opponent.
+- **Quiet Shape:** Ignore the first point of precision penalty on Veil or Bind techniques.
+- **Hard Finish:** +1 margin when targeting an already wounded or pressured opponent.
+- **Stable Focus:** Once per scene, treat a success with distortion as a clean success.
+
+Edges should stay small. If an Edge starts reading like a separate subsystem, it is too large.
+
+---
+
+## Weakness Selection
+
+Every starting character must select at least **one weakness**.
+
+Core weaknesses:
+
+- **High Instability Gain:** Gain +1 instability on every failed magic attempt.
+- **Slow Execution:** The first magic attempt each round counts one speed category slower.
+- **High Exposure Cost:** Committed or Extended actions impose an additional –1 to the next defense target.
+
+Additional weaknesses can be invented if they fit the same pattern: narrow, coherent, and mechanically meaningful.
+
+---
+
+## Narrative Justification
+
+Each player should define, in one or two sentences, how the character acquired magic:
+
+- exposure
+- partial training
+- practical use
+- cross-training
+
+This has no default mechanical effect. Its purpose is coherence. The profile should make sense in the fiction.
+
+---
+
+## Progression
+
+### Skill Progression
+
+Mundane skills improve through use, pressure, and reflection just as before. Spell progression uses tiers:
+
+```text
+Untrained -> Practiced -> Reliable -> Mastered
+```
+
+Each improvement increases reliability rather than unlocking new capability.
+
+### Learning Model
+
+Progression occurs through:
+
+- use under pressure
+- failure followed by correction
+- exposure to higher-difficulty situations
+
+Optional formal training can reduce variance and speed learning, but it is not required. A character can learn from field use, not only from teachers.
+
+### No Hard Unlocks
+
+Any spell can be attempted at any time.
+
+Proficiency affects:
+
+- instability gain
+- exposure cost
+- outcome consistency
+
+It does **not** affect basic permission to try.
+
+### Advancement Procedure
+
+Recommended procedure:
+
+1. Mark a mundane skill or spell whenever it is used under real pressure.
+2. If the use involved failure, distortion, or meaningful resistance, mark it again.
+3. During downtime, advance one marked item if the character spent time reflecting, practicing, or correcting mistakes.
+
+This keeps progression tied to behavior and consequence instead of to abstract unlock trees.
+
+---
+
+## Provisional Scope
+
+These rules aim to keep player-facing concepts minimal:
+
+- what the character can attempt
+- what the character is reliable with
+- what the character risks when pushing harder
+
+If future expansion adds more detail, it should still preserve that structure.

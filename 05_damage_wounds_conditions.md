@@ -80,19 +80,24 @@ Additional failed checks at the GM's discretion may result in death. This ties m
 
 A character may use a **First Aid** action (Standard EW) to stabilize a wound. On a successful WIL + Medicine roll:
 - One Light Wound is stabilized (bleeding stops).
-- Serious or Critical Wounds cannot be healed in battle without magic.
+- Serious or Critical Wounds cannot be healed in battle without a Vital attempt.
 
 ### Rest Recovery
 
 - **Light Wounds:** Heal after a short rest (~1 hour).
 - **Heavy Wounds:** Require a long rest (~1 day) or medical care.
-- **Severe / Critical Wounds:** Require extended rest or magical intervention.
+- **Severe / Critical Wounds:** Require extended rest or a high-margin Vital attempt.
 
 Stamina (FP) recovers at 1 FP per minute of complete rest, or 1 FP per round of light activity.
 
-### Magic Healing
+### Vital and Rend
 
-Healing spells are governed by Section 7 (Magic). Minor healing closes Light Wounds; major healing closes one Heavy Wound. Critical healing spells require higher tiers and significant instability costs. All healing spells add Instability Cost to the caster's pool.
+Magic uses the same resolution system described in Section 1. Two spell profiles interact with wounds directly:
+
+- **Vital** closes, stabilizes, or downgrades wounds when the intent is restorative. The better the margin, the cleaner the recovery.
+- **Rend** worsens existing injury, tears armor gaps open, or converts a clean hit into a more dangerous wound state when the intent is destructive.
+
+Neither creates a separate healing or damage subsystem. They modify the same wound categories already defined here.
 
 ---
 
@@ -130,7 +135,7 @@ Each failed Pressure roll reduces current PR by the margin of failure. Each succ
 - Successful morale checks
 - Rally actions from allied characters
 - Elimination of the source of threat
-- Magic or leadership abilities
+- Vital attempts, Veil calming effects, or leadership abilities
 
 ---
 
