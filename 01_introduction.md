@@ -2,7 +2,7 @@
 
 ## Probability System Overview
 
-This rulebook governs a tactical fantasy role-playing game that draws from **Tunnels & Trolls** (TNT), **The Fantasy Trip** (TFT), and **GURPS**. Every mechanical rule in this system ultimately reduces to a single probability question: *what is the chance this action succeeds given current conditions?* Understanding that question is understanding the game.
+This rulebook governs a tactical fantasy role-playing game. Every mechanical rule in this system ultimately reduces to a single probability question: *what is the chance this action succeeds given current conditions?* Understanding that question is understanding the game.
 
 The probability model is a **3d6 bell curve**. Rolling three six-sided dice and summing the result produces values from 3 to 18, with the mass of outcomes clustered around 10–11. This distribution means that moderate skill bonuses (+1 or +2) have significant impact near the centre of the curve, while extreme values (3 or 18) are genuinely rare. Combat, spellcasting, social interaction, and skill checks all flow through this same engine, so every lesson a player learns in one context applies across the whole game.
 

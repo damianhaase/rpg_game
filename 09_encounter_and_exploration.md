@@ -1,6 +1,6 @@
 # Game Rulebook — Section 9: Encounter and Exploration Rules
 
-## Preamble: The Frame Around Combat
+## The Frame Around Combat
 
 The probability engine governs what happens when characters are in conflict. But a playable game also needs rules for *how conflict starts*, *what happens in the spaces between fights*, and *what the physical environment does to the numbers*. This section fills those gaps.
 

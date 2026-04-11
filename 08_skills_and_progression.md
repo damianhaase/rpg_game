@@ -1,6 +1,6 @@
 # Game Rulebook — Section 8: Skills and Progression
 
-## Preamble: Skills as Probability Amplifiers
+## Skills as Probability Amplifiers
 
 Attributes define the raw floor of a character's capability. Skills define how much of that capability is trained and reliable. In the 3d6 system, each point of effective skill raises the success probability by a meaningful amount — roughly 5–10% in the middle of the curve where most characters operate. A character who has trained extensively is not just "better in flavour"; they have a statistically distinct success profile on every relevant roll.
 

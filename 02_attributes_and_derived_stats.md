@@ -1,6 +1,6 @@
 # Game Rulebook — Section 2: Attributes and Derived Statistics
 
-## Preamble: How Attributes Feed the Probability Engine
+## How Attributes Feed the Probability Engine
 
 Every number on a character sheet eventually becomes part of a target number that is compared to a 3d6 roll. Attributes are the raw inputs; derived statistics are the intermediate results; target numbers and modifiers are the outputs that enter the probability curve.
 
@@ -47,7 +47,7 @@ Combat does not use a visible turn order or initiative roll. Instead, actions ex
 
 Speed governs movement per combat round and contributes to positioning actions.
 
-```
+```text
 SPD = ⌊ (DX + CON) / 4 ⌋
 ```
 
@@ -57,7 +57,7 @@ A typical human with DX 10 and CON 10 has SPD 5. Encumbrance and armor may reduc
 
 ### Carrying Capacity (Load)
 
-```
+```text
 Comfortable Load (kg) = ST × 5
 Maximum Load (kg)     = ST × 15
 ```
@@ -68,7 +68,7 @@ Carrying up to Comfortable Load imposes no penalty. For every 25% of Comfortable
 
 ### Damage Bonus (DB)
 
-```
+```text
 DB = ⌊ (ST − 10) / 2 ⌋
 ```
 
@@ -78,7 +78,7 @@ ST 10–11 gives DB 0. ST 14 gives DB +2. ST 8 gives DB –1, to a minimum of �
 
 ### Hit Points (HP)
 
-```
+```text
 HP = CON × 2
 ```
 
@@ -88,7 +88,7 @@ This is the default health model. Some variants may average ST and CON, but the 
 
 ### Fatigue Points (FP)
 
-```
+```text
 FP = CON × 2
 ```
 
@@ -98,7 +98,7 @@ Fatigue measures physical and mental exertion. Sprinting, all-out defense, wrest
 
 ### Magic Points (MP)
 
-```
+```text
 MP = IQ × 2
 ```
 
@@ -108,7 +108,7 @@ Magic remains primarily an Intelligence-based system. Will, talents, or traits m
 
 ### Pressure Resistance (PR)
 
-```
+```text
 PR = WIL + ⌊ CON / 2 ⌋
 ```
 
@@ -120,11 +120,12 @@ Pressure tracks fear, stress, pain, and morale collapse. Pressure thresholds are
 
 Response Speed determines whether a character is fast and aware enough to act during another character's exposure window.
 
-```
+```text
 RS = DX + ⌊ IQ / 2 ⌋ + situational modifiers
 ```
 
 Situational modifiers may include:
+
 - armor penalty
 - encumbrance penalty
 - wound penalty
@@ -140,13 +141,14 @@ Situational modifiers may include:
 
 Reaction Budget measures how much tactical bandwidth a character has in one combat round.
 
-```
+```text
 RB = 1 + ⌊ IQ / 4 ⌋
 ```
 
 Minimum RB is 1 unless a condition reduces it to 0. A typical IQ 10 character has RB 3. Stunned, overloaded, or severely wounded characters may have RB reduced.
 
 Reaction costs:
+
 - Dodge: 1 RB
 - Parry: 1 RB
 - Block: 1 RB
@@ -162,7 +164,7 @@ A character may not spend more RB in a round than they possess.
 
 Constitution provides a small built-in toughness that stacks with armor.
 
-```
+```text
 Natural DR = ⌊ (CON − 10) / 2 ⌋   (minimum 0)
 ```
 
@@ -176,7 +178,7 @@ Natural DR stacks with Armor DR. When damage is inflicted, subtract Total DR (Na
 
 Movement speed during a combat round depends on Speed:
 
-```
+```text
 Move (metres per round) = SPD × 2
 Move (hexes per round)  = SPD ÷ 1.5  (round up)
 ```
@@ -191,13 +193,14 @@ A character with SPD 5 can move 10 metres or 4 hexes in one round if they spend 
 
 Constitution reduces the severity of the death spiral without removing it.
 
-```
+```text
 WB = ⌊ CON / 4 ⌋
 ```
 
 When wound penalties are applied, reduce the total penalty by WB, to a minimum penalty of 0. This does not remove state restrictions such as "cannot Sprint" or "cannot Counter"; it only reduces numeric penalties.
 
 Examples:
+
 - CON 8 gives WB 2.
 - CON 12 gives WB 3.
 - CON 16 gives WB 4.
@@ -212,19 +215,19 @@ Defense is no longer treated as a single generic formula. Instead, the defender 
 
 ### Dodge Target
 
-```
+```text
 Dodge Target = 9 + DX + Dodge Skill + state modifiers − armor penalty
 ```
 
 ### Parry Target
 
-```
+```text
 Parry Target = 9 + DX + Weapon Skill + weapon parry bonus + state modifiers
 ```
 
 ### Block Target
 
-```
+```text
 Block Target = 9 + ST + Shield Skill + shield bonus + state modifiers
 ```
 
@@ -235,11 +238,13 @@ Block is limited by facing, available shield coverage, and whether the attack co
 ## Heavy Armor and Strength Requirements
 
 Heavy armor requires Strength to use effectively. For each armor type, define:
+
 - Damage Reduction (DR)
 - Armor penalty
 - Minimum ST
 
 If the wearer's ST is below minimum ST:
+
 - Apply the armor penalty twice
 - Reduce SPD by 1
 - Reduce RS by 1

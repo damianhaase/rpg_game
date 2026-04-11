@@ -1,6 +1,6 @@
 # Game Rulebook — Section 6: Equipment
 
-## Preamble: Equipment as Probability Modifiers and Timing Modifiers
+## Equipment as Probability Modifiers and Timing Modifiers
 
 Equipment does two things in this system: it shifts target numbers, and it shifts Exposure Windows. A fast weapon (EW –1) makes a character harder to exploit during their attack. Heavy armor (Armor DR +3, armor penalty to RS) makes a character more resistant to damage but more vulnerable to being hit by exposing a smaller defense window. A shield does not just "add to block" — it adjusts the Block Target and provides situational cover against frontal ranged attacks.
 

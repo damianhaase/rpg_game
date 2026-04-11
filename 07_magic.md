@@ -1,6 +1,6 @@
 # Game Rulebook — Section 7: Magic
 
-## Preamble: Magic as a High-EW, High-Risk Action
+## Magic as a High-EW, High-Risk Action
 
 Magic runs through the same probability engine as every other action in the system. A spell is an action. It creates an Exposure Window. It has an attack target (Casting Target) that feeds into the 3d6 roll. It produces margins of success or failure that determine effect severity. If the caster fails, there are consequences — not a blank miss, but escalating instability that makes subsequent spells riskier and which interacts with the Pressure system.
 

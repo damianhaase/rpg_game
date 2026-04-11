@@ -1,6 +1,6 @@
 # Game Rulebook — Section 4: Combat Resolution
 
-## Preamble: One Engine for All Attack Types
+## One Engine for All Attack Types
 
 Melee, ranged, and magical attacks are not separate subsystems. They are different *payloads* moving through the same timing-and-resolution engine. What changes between them is not the dice mechanic or the success formula — it is the modifiers that enter the target number, the reactions that are legally available, and the cover and positioning considerations that apply.
 

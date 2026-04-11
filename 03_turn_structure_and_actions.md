@@ -1,6 +1,6 @@
 # Game Rulebook — Section 3: Turn Structure and Actions
 
-## Preamble: How Timing Governs the Probability Space
+## How Timing Governs the Probability Space
 
 The core insight of this combat system is that *time is not a queue — it is a resource that actions consume unevenly*. A light jab takes less time than a full axe swing. A prepared bowshot takes more time than a snap draw. Every action exposes the actor for some window of vulnerability, and whether anyone can exploit that window depends on their Response Speed and available Reaction Budget.
 

@@ -1,6 +1,6 @@
 # Game Rulebook — Section 5: Damage, Wounds, and Conditions
 
-## Preamble: Injuries as Probability Modifiers
+## Injuries as Probability Modifiers
 
 The wound system is not a separate subsystem bolted onto combat — it is a feedback loop inside the probability engine. When a character is injured, the wound applies a penalty to their relevant target numbers, which directly shifts the 3d6 success curve. A Heavy Wound (–1 to physical actions) does not just say "you feel bad"; it means that actions which previously had a 74% success rate now have roughly 63%, and actions near the edge of feasibility may become unlikely or impossible.
 
