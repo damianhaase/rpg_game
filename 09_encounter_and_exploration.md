@@ -1,6 +1,6 @@
 # Game Rulebook — Section 9: Encounter and Exploration Rules
 
-## Preamble: The Frame Around Combat
+## The Frame Around Combat
 
 The probability engine governs what happens when characters are in conflict. But a playable game also needs rules for *how conflict starts*, *what happens in the spaces between fights*, and *what the physical environment does to the numbers*. This section fills those gaps.
 
@@ -33,7 +33,7 @@ When one group attempts to ambush another, or when a hidden enemy is suddenly re
 |---|---|
 | Attacker succeeds, defender fails | **Full Surprise.** Defenders have RS = 0 and RB = 0 for the entire first round. They may not react to any action. |
 | Both succeed or both fail | **Alert.** No surprise. Combat begins normally. |
-| Defender succeeds, attacker fails | **Foiled ambush.** Defenders may declare intent first and may fire or cast before attackers close. Attackers are Off-Balance in round 1. |
+| Defender succeeds, attacker fails | **Foiled ambush.** The ambushers begin round 1 **Off-Balance**. Defenders gain +2 RS against those attackers during the first round and may react normally to their exposure. |
 
 ---
 
@@ -118,11 +118,11 @@ Name: [Monster Name]
 ST:   [value]   DX:  [value]   CON: [value]
 IQ:   [value]   WIL: [value]
 
-HP:  [CON × 2]    FP:  [CON × 2]    PR:  [WIL + CON/2]
-SPD: [(DX+CON)/4] RS:  [DX + IQ/2]  RB:  [1 + IQ/4]
-WB:  [CON/4]      DB:  [(ST-10)/2]   Natural DR: [(CON-10)/2]
+HP:  [CON × 2]    FP:  [CON × 2]    PR:  [WIL + floor(CON/2)]
+SPD: [floor((DX+CON)/4)] RS: [DX + floor(IQ/2)]  RB: [1 + floor(IQ/4)]
+WB:  [floor(CON/4)]      DB: [floor((ST-10)/2)]  Natural DR: [floor((CON-10)/2)]
 
-Armor:   [type, DR value, armor penalty]
+Armor:   [type, Armor DR value, armor penalty]
 Weapon:  [name, damage, parry bonus, traits, EW modifier]
 Skills:  [weapon skill rank, any other relevant skills]
 Traits:  [special abilities]
@@ -163,7 +163,7 @@ SPD: 5   RS: 12   RB: 3
 WB: 3    DB: +2   Natural DR: 1
 
 Armor:   Chainmail, DR 3, armor penalty –1
-Weapon:  Battle Axe — 1d6+3+DB (avg 8), Parry 0, heavy trait (EW +2)
+Weapon:  Battle Axe — 1d6+3+DB (avg 8.5), Parry 0, heavy trait (EW +2)
          Shield — Block Bonus +2, frontal
 Skills:  Axes Proficient (+4), Shield Competent (+2)
 Traits:  Tough — once per encounter, when first reduced to 0 HP, make a free

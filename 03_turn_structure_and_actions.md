@@ -1,6 +1,6 @@
 # Game Rulebook — Section 3: Turn Structure and Actions
 
-## Preamble: How Timing Governs the Probability Space
+## How Timing Governs the Probability Space
 
 The core insight of this combat system is that *time is not a queue — it is a resource that actions consume unevenly*. A light jab takes less time than a full axe swing. A prepared bowshot takes more time than a snap draw. Every action exposes the actor for some window of vulnerability, and whether anyone can exploit that window depends on their Response Speed and available Reaction Budget.
 
@@ -143,7 +143,7 @@ Modify EW based on circumstances:
 - **Take Cover:** Move into or improve cover against ranged threats.
 - **Cast:** Begin and resolve a spell according to its casting profile.
 - **Recover:** Reduce pressure, stabilize footing, or regroup after strain.
-- **Disengage:** Attempt to safely leave melee. This is a Slow action (EW 6). The character makes a DX + Athletics roll vs. the opponent's DX + Weapon Skill. On success, the character moves one range band away without triggering a free Counter reaction. On failure, the opponent may immediately take a Counter reaction (1 RB) against the departing character. Forced withdrawal under pressure (e.g., Broken state) uses the same check.
+- **Disengage:** Attempt to safely leave melee. This is a Slow action (EW 6). The character makes a DX + Athletics roll vs. the opponent's DX + Weapon Skill. On success, the character moves one range band away without triggering a free Counter reaction. On failure, the opponent may immediately take a Counter reaction (2 RB) against the departing character. Forced withdrawal under pressure (e.g., Broken state) uses the same check.
 - **Grapple:** Attempt to seize and restrain an opponent. The attacker makes an opposed ST + Unarmed Skill roll vs. the defender's ST + Unarmed Skill (or DX + Athletics if the defender chooses to writhe free). This is a Standard action (EW 4). On success, both characters enter the Grappled state. While Grappled: neither may move normally; neither may Dodge; both may attempt to break free (Standard action, same opposed roll), strike with small weapons only (–2 to attack), or attempt to throw/pin (Extended action, separate rules may be added). A third party may assist a grappled character's break-free roll by adding their ST as a bonus.
 
 ---

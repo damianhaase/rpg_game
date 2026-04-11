@@ -1,6 +1,6 @@
 # Game Rulebook — Section 5: Damage, Wounds, and Conditions
 
-## Preamble: Injuries as Probability Modifiers
+## Injuries as Probability Modifiers
 
 The wound system is not a separate subsystem bolted onto combat — it is a feedback loop inside the probability engine. When a character is injured, the wound applies a penalty to their relevant target numbers, which directly shifts the 3d6 success curve. A Heavy Wound (–1 to physical actions) does not just say "you feel bad"; it means that actions which previously had a 74% success rate now have roughly 63%, and actions near the edge of feasibility may become unlikely or impossible.
 
@@ -14,10 +14,11 @@ Pressure functions the same way: it accumulates as a separate track, crosses thr
 
 ### Step 1 — Roll Damage
 
-When an attack hits, roll the weapon's damage dice, add the attacker's Damage Bonus (DB), then subtract the defender's Damage Reduction (DR):
+When an attack hits, roll the weapon's damage dice, add the attacker's Damage Bonus (DB), then subtract the defender's **Total DR**:
 
 ```
-Final Damage = max(0, Base Damage + DB − Armor DR)
+Total DR = Natural DR + Armor DR
+Final Damage = max(0, Base Damage + DB − Total DR)
 ```
 
 Minimum damage of 1 if the attack connected (not a glancing force hit, which may deal 0).
@@ -49,7 +50,7 @@ Multiple Light Wounds can accumulate to a Heavy Wound at the GM's discretion (ty
 
 ### Stagger
 
-A stagger occurs when a single hit meets or exceeds 25% of max HP. A staggered character suffers –2 to attack, –1 to defense, and may take only a limited action on their next turn. Stagger clears at the end of the following round unless a Severe or Critical Wound also applies.
+A stagger occurs when a single hit meets or exceeds 25% of max HP. A staggered character suffers –2 to attack, –1 to defense, and may take only a limited action in the next round. Stagger clears at the end of the following round unless a Severe or Critical Wound also applies.
 
 ---
 

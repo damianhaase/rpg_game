@@ -1,6 +1,6 @@
 # Game Rulebook — Section 7: Magic
 
-## Preamble: Magic as a High-EW, High-Risk Action
+## Magic as a High-EW, High-Risk Action
 
 Magic runs through the same probability engine as every other action in the system. A spell is an action. It creates an Exposure Window. It has an attack target (Casting Target) that feeds into the 3d6 roll. It produces margins of success or failure that determine effect severity. If the caster fails, there are consequences — not a blank miss, but escalating instability that makes subsequent spells riskier and which interacts with the Pressure system.
 
@@ -54,7 +54,7 @@ Casting Target = IQ + Spell Skill + Focus Item Bonus − Pressure − Current In
 
 A Drift Event occurs on critical casting failure. Effects are narrative and should be tailored to the scene:
 
-- Time distorts in the local area (one combatant acts twice; another is skipped)
+- Time distorts in the local area (one combatant gains +2 RS and +1 RB for the round; another has RS reduced to 0 until end of round)
 - A random spell from the caster's pool triggers uncontrolled
 - A minor entity or effect from another plane slips through momentarily
 - All characters in Near range gain 1d6 Pressure from the burst of chaotic energy

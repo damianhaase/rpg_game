@@ -1,6 +1,6 @@
 # Game Rulebook — Section 8: Skills and Progression
 
-## Preamble: Skills as Probability Amplifiers
+## Skills as Probability Amplifiers
 
 Attributes define the raw floor of a character's capability. Skills define how much of that capability is trained and reliable. In the 3d6 system, each point of effective skill raises the success probability by a meaningful amount — roughly 5–10% in the middle of the curve where most characters operate. A character who has trained extensively is not just "better in flavour"; they have a statistically distinct success profile on every relevant roll.
 
@@ -35,7 +35,7 @@ If a character attempts to use a skill for which they have no training, they def
 Effective Target = Relevant Attribute − 4
 ```
 
-For example, a hero with DX 12 picking up a great axe but lacking Heavy Weapons skill would treat their effective attack target as 8. The action remains possible; it is simply much harder.
+For example, a hero with **ST 12** picking up a great axe but lacking Axes skill would treat their effective heavy-melee attack target as **8** (12 − 4). The action remains possible; it is simply much harder.
 
 Some skills (Arcane Magic, Surgery) have no useful default and cannot be attempted without at least Novice training.
 

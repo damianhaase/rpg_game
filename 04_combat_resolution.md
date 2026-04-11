@@ -1,6 +1,6 @@
 # Game Rulebook — Section 4: Combat Resolution
 
-## Preamble: One Engine for All Attack Types
+## One Engine for All Attack Types
 
 Melee, ranged, and magical attacks are not separate subsystems. They are different *payloads* moving through the same timing-and-resolution engine. What changes between them is not the dice mechanic or the success formula — it is the modifiers that enter the target number, the reactions that are legally available, and the cover and positioning considerations that apply.
 
@@ -27,22 +27,27 @@ Combat resolves in this order:
 4. Roll the actual action and defense checks (3d6 ≤ target = success).
 5. Compare margins and apply damage, pressure, and state changes.
 
-### Opposed Resolution Formula
+### Canonical Opposed Resolution
 
-```
-P(hit) = P_attacker × (1 − P_defender)
+The canonical combat engine is an opposed margin comparison:
+
+1. Attacker rolls 3d6 against the relevant attack target.
+2. Defender rolls 3d6 against the chosen legal defense target, if any.
+3. If only one side succeeds, that side wins the exchange.
+4. If both sides succeed, compare margins of success; the higher margin wins.
+5. If margins tie, treat the result as a partial success, graze, or stalemate as the specific action allows.
+
+This preserves the intended 3d6 opposed feel. It also means a defender can succeed and still lose if the attacker succeeds by more.
+
+### Probability Display Approximation
+
+If a digital implementation wants a fast, player-facing estimate before dice are rolled, it may display an approximation such as:
+
+```text
+Approx. hit chance ≈ P(attacker succeeds and defender does not beat that result)
 ```
 
-Where `P_attacker` and `P_defender` are derived from the 3d6 cumulative distribution function for each character's effective target number. Clamp all target values to the range 3–17 before looking up probabilities.
-
-```python
-def compute_hit_chance(attacker_target, defender_target):
-    T_a = clamp(3, 17, attacker_target)
-    T_d = clamp(3, 17, defender_target)
-    P_a = CDF_3d6[T_a]
-    P_d = CDF_3d6[T_d]
-    return P_a * (1 - P_d)
-```
+Any such percentage is only a UI aid. It does not replace the opposed margin procedure above.
 
 ---
 
@@ -264,76 +269,82 @@ A swordsman declares a heavy Commit attack with a great axe.
 
 This example demonstrates the complete probability pipeline for a mixed melee-ranged round with active wounds affecting both parties.
 
-**Setup:** Archer A (DX 12, Missile Skill Competent +2, Longbow Acc +2) versus Swordsman B (ST 11, Melee Skill Proficient +4) who has a Heavy Wound from a prior hit (–1 all physical actions; after WB of 1 from CON 12, net penalty is 0 numeric but Sprint is unavailable). Archer A is behind Light Cover (+1 to her defense vs ranged). Both are at Medium range from each other. B is closing.
+**Setup:** Archer A (DX 12, IQ 10, Bows Competent +2, Longbow Acc +2) versus Swordsman B (ST 11, DX 9, IQ 9, Swords Proficient +4, Dodge Novice +0, Chainmail Armor DR 3, armor penalty 1) who has a Heavy Wound from a prior hit. B has CON 12, so **WB = 3**; the wound's numeric penalty is reduced to 0, but Sprint is still unavailable. Archer A begins behind Light Cover. Both are at Medium range. B is closing.
 
-### Round — Action Declaration
+### Round 1 — Action Declaration
 
 - **Archer A** declares **Aim** (Standard EW 4). She has 1 Aim stack from last round; this brings her to +2 (max default).
-- **Swordsman B** declares **Commit Attack** (standard sword attack in Committed stance; EW = Standard 4 + Committed +2 = 6).
+- **Swordsman B** declares **Advance in Committed stance** to close the distance (EW = Standard 4 + Committed +2 = 6).
 
 ### Reaction Check
 
-A's RS = DX 12 + ⌊IQ 10 / 2⌋ = 12 + 5 = **17**. B's EW = 6. Since 17 ≥ 6, A *could* fire into B's commitment window. But A is currently declaring Aim, not Fire. She chooses not to change her intent — she will continue aiming and fire next round with +2 stacks.
+A's RS = DX 12 + ⌊IQ 10 / 2⌋ = 12 + 5 = **17**. B's EW = 6. Since 17 ≥ 6, A *could* spend RB on a reaction during B's committed advance. She chooses not to; she keeps aiming to preserve the full +2 Aim bonus.
 
-B's RS = DX 9 + ⌊IQ 9 / 2⌋ = 9 + 4 = **13**. A's EW = 4. Since 13 ≥ 4, B could react to A's Aim action. But B is Committed and has already declared an aggressive charge — reacting would mean abandoning the charge (losing Committed bonus). B holds.
+B's RS = DX 9 + ⌊IQ 9 / 2⌋ = 9 + 4 = **13**. A's EW = 4. Since 13 ≥ 4, B could react to A's Aim action. But B is Committed and pressing forward, so he does not spend RB to interrupt.
 
 ### Resolve Phase
 
 - A completes Aim. Aim stack = +2.
-- B completes charge. Now Engaged. Committed state applies next round.
+- B completes the advance. He ends the round Engaged. His Committed stance still applies to defenses until his next resolution.
 
 ### Round 2 — Action Declaration
 
 - **Archer A** declares **Fire** (EW Standard 4, +2 Aim bonus accumulated).
 - **Swordsman B** declares **Attack** in Committed stance (EW = 4 + 2 = 6).
 
-### Resolution — A fires first (lower EW than B; simultaneous EW, but A fires *into* B's commitment)
+### Resolution — Archer A's Shot
 
 **A's Ranged Attack Target:**
 ```
 DX (12) + Missile Skill (+2) + Acc (+2) + Range (0, Medium) + Aim Bonus (+2) + Wound Penalty (0) = 18 → clamp to 17
 ```
-P_A = ~99% (effectively certain at this range with full aim)
 
 **B's Defense (Dodge, only legal ranged defense; Parry and Block not applicable here):**
 ```
-Dodge Target = 9 + DX (9) + Dodge Skill (0) − ranged penalty (−2) − armor penalty (−1 chainmail) = 15
+Dodge Target = 9 + DX (9) + Dodge Skill (0) − ranged penalty (2) − armor penalty (1) = 15
 ```
 But B is Committed (+2 EW means –1 to defensive targets):
 ```
 Adjusted Dodge Target = 15 − 1 = 14
 ```
-P_D = ~91%
+Archer A rolls **11**, succeeding by margin **+6**.
 
-**Final hit chance:**
+Swordsman B rolls **13**, succeeding by margin **+1**.
+
+Both succeed, so compare margins. Archer A wins the exchange by **5**, so the arrow hits despite B's attempted dodge.
+
+**Damage:**
+```text
+Longbow damage = 1d6+1
+Damage roll = 5, so raw damage = 6
+Natural DR = 1 (CON 12)
+Armor DR = 3 (chainmail)
+Total DR = 4
+Final Damage = max(1, 6 − 4) = 2
 ```
-P(hit) = 0.99 × (1 − 0.91) = 0.99 × 0.09 ≈ 9%
-```
 
-This is low — the defender's high dodge skill and Light Cover make evasion very likely. But A chose to invest two rounds in Aim precisely for this shot; on a hit, B takes a Heavy Wound (or worsens to Severe if already wounded), potentially stopping the charge.
+The shot lands, but armor and toughness soak most of it. B takes only 2 HP damage and no new wound category, which is exactly why closing in heavy armor is viable even when the archer wins the margin contest.
 
-### Resolution — B's Commit Attack (assuming A is not hit this round)
+### Resolution — Swordsman B's Attack
 
 **B's Melee Attack Target (Committed):**
 ```
-ST (11) + Melee Skill (+4) + Committed bonus (+1) − Heavy Wound penalty (net 0 after WB) = 16
+ST (11) + Swords Skill (+4) + Committed bonus (+1) − Heavy Wound penalty (net 0 after WB) = 16
 ```
-P_A = ~98%
 
 **A's Defense (Dodge, melee — no ranged penalty):**
 ```
-Dodge Target = 9 + DX (12) + Dodge Skill (0) − Cover (cover doesn't help in melee) − armor penalty (0, no armor) = 21 → clamp to 17
+Dodge Target = 9 + DX (12) + Dodge Skill (0) − armor penalty (0) = 21 → clamp to 17
 ```
-P_D = ~99%
+B rolls **10**, succeeding by margin **+6**.
 
-**Final hit chance:**
-```
-P(hit) = 0.98 × (1 − 0.99) = 0.98 × 0.01 ≈ 1%
-```
+A rolls **12**, succeeding by margin **+5**.
 
-A's DX 12 and light armor make her nearly impossible to hit in melee when she is unencumbered. The numbers show why the swordsman needed to close through the ranged fire and not give A two rounds to aim — once Engaged, A's Dodge is formidable but her ranged attack is now penalized at point-blank range (which changes the equation in the next round).
+Both succeed, but B's margin is higher, so the sword strike still lands by a narrow edge.
 
-This example shows how melee and ranged tactics use the same pipeline while creating genuinely different risk profiles. The swordsman's best move was to reach A before she finished aiming; A's best move was to fire before he closed.
+This is the core opposed-feel the system is aiming for: a very agile defender can succeed on the defense roll and still be clipped by a stronger attack with a better margin.
+
+This example shows how melee and ranged tactics use the same pipeline while creating genuinely different risk profiles. The swordsman's best move was to close quickly and trust Total DR to blunt the arrow; A's best move was to exploit his Committed exposure before he reached her.
 
 ---
 
@@ -342,12 +353,12 @@ This example shows how melee and ranged tactics use the same pipeline while crea
 When presenting attack options, display intermediate calculations:
 
 **Fire at Goblin (Medium Range)**
-- Ranged Attack Target: 14 → P_A ≈ 91%
-- Goblin's Dodge Target: 10 (with –2 ranged penalty) → P_D ≈ 50%
-- Cover bonus (Medium): +2 → Adjusted P_D ≈ 74%
-- **Final hit chance: 91% × (1 – 74%) ≈ 24%**
+- Ranged Attack Target: 14
+- Goblin's Dodge Target: 10 (with –2 ranged penalty)
+- Cover bonus (Medium): +2 to the defender's effective defense target
+- UI may show an approximate chance, but the actual engine still resolves with two 3d6 rolls and a margin comparison.
 
-This style reinforces probability transparency and shows how cover and dodge interact.
+This style reinforces probability transparency and shows how cover and dodge interact without replacing the canonical opposed-roll procedure.
 
 ---
 

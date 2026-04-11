@@ -1,8 +1,8 @@
 # Game Rulebook — Section 6: Equipment
 
-## Preamble: Equipment as Probability Modifiers and Timing Modifiers
+## Equipment as Probability Modifiers and Timing Modifiers
 
-Equipment does two things in this system: it shifts target numbers, and it shifts Exposure Windows. A fast weapon (EW –1) makes a character harder to exploit during their attack. Heavy armor (DR +3, armor penalty to RS) makes a character more resistant to damage but more vulnerable to being hit by exposing a smaller defense window. A shield does not just "add to block" — it adjusts the Block Target and provides situational cover against frontal ranged attacks.
+Equipment does two things in this system: it shifts target numbers, and it shifts Exposure Windows. A fast weapon (EW –1) makes a character harder to exploit during their attack. Heavy armor (Armor DR +3, armor penalty to RS) makes a character more resistant to damage but more vulnerable to being hit by exposing a smaller defense window. A shield does not just "add to block" — it adjusts the Block Target and provides situational cover against frontal ranged attacks.
 
 Every piece of equipment is defined with timing and exposure in mind, not initiative. The old trait language that gave weapons "+1 to initiative" or "–1 to initiative" has been replaced entirely with the Exposure Window model. A *fast* weapon creates a smaller EW. A *heavy* weapon creates a larger EW. These are timing facts, not queue-position bonuses.
 
@@ -85,7 +85,7 @@ Armor reduces incoming damage but makes the wearer less agile. Each armor type i
 ```python
 Armor = {
     "id": "chain",
-    "damage_reduction": 3,
+    "armor_dr": 3,
     "armor_penalty": 1,
     "min_st": 11,
     "traits": ["medium_armor"]
@@ -94,7 +94,7 @@ Armor = {
 
 ### Armor Effects
 
-- Reduce incoming damage by DR (to a minimum of 0).
+- Reduce incoming damage by Armor DR. Total DR is Natural DR + Armor DR.
 - Apply armor penalty to Dodge Target.
 - Apply armor penalty to Response Speed (RS).
 - May reduce SPD if the wearer does not meet Min ST.
@@ -102,7 +102,7 @@ Armor = {
 
 ### Armor Examples
 
-| Armor | DR | Armor Penalty | Min ST | Traits |
+| Armor | Armor DR | Armor Penalty | Min ST | Traits |
 |---|---|---|---|---|
 | Leather | 1 | 0 | 8 | flexible |
 | Studded Leather | 2 | 0 | 9 | flexible |
