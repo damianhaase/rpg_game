@@ -43,7 +43,7 @@ Weapon = {
 ### Weapon Examples
 
 | Weapon | Acc | Damage | Parry | Mode | Min ST | EW Mod | Traits |
-|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Dagger | +1 | 1d6–1 | +1 | Finesse | 6 | 0 | fast, thrown, small |
 | Rapier | +1 | 1d6+0 | +1 | Finesse | 8 | –1 | precise, reach |
 | Broadsword | 0 | 1d6+2 | +1 | Balanced | 10 | 0 | balanced |
@@ -61,7 +61,7 @@ Weapon = {
 Replace all old initiative-based trait language with the following:
 
 | Trait | Effect |
-|---|---|
+| --- | --- |
 | **fast** | Exposure Window –1 for its primary attack mode |
 | **heavy** | Exposure Window +2; +2 damage; may enable glancing force damage |
 | **precise** | +1 to aimed or carefully prepared attacks |
@@ -103,7 +103,7 @@ Armor = {
 ### Armor Examples
 
 | Armor | Armor DR | Armor Penalty | Min ST | Traits |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Leather | 1 | 0 | 8 | flexible |
 | Studded Leather | 2 | 0 | 9 | flexible |
 | Chainmail | 3 | –1 | 11 | medium_armor |
@@ -114,7 +114,7 @@ Armor = {
 ### Armor Traits
 
 | Trait | Effect |
-|---|---|
+| --- | --- |
 | **flexible** | Reduces penalty when Prone; does not restrict sprint. |
 | **bulky** | Reduces SPD by 1; may restrict Counter. |
 | **heavy_armor** | Applies armor penalty twice if Min ST not met (see Section 2). |
@@ -146,7 +146,7 @@ Shield = {
 ### Shield Examples
 
 | Shield | Block Bonus | vs. Ranged (Frontal) | Min ST | Traits |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Buckler | +1 | 0 | 8 | shield, fast |
 | Heater Shield | +2 | +1 | 10 | shield, frontal |
 | Kite Shield | +2 | +2 | 12 | shield, frontal, bulky |
@@ -175,7 +175,7 @@ Item = {
 ### Item Examples
 
 | Item | Uses | Effect |
-|---|---|---|
+| --- | --- | --- |
 | Healing Potion (Minor) | 1 | Closes 1 Light Wound; restores ~5 HP. Standard action to use. |
 | Healing Potion (Major) | 1 | Closes 1 Heavy Wound; restores ~10 HP. Slow action to use. |
 | Focus Crystal | 3 | +1 to a Magic Attempt Target for 1 attempt; reduces Instability gain by 1. |
@@ -187,6 +187,7 @@ Item = {
 ## Equipment Slots
 
 Each character may equip:
+
 - One main weapon
 - One offhand item (shield, second weapon, or focus item)
 - One armor set

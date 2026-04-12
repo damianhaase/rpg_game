@@ -15,7 +15,7 @@ Magic uses the same resolution system described in Section 1. Spell proficiency 
 Most mundane skills use the standard bonus ladder below.
 
 | Rating | Label | Bonus |
-|---|---|---|
+| --- | --- | --- |
 | Untrained | No skill | Attribute – 4 (default) |
 | Novice | Basic competence | +0 |
 | Competent | Practiced fighter | +2 |
@@ -23,7 +23,7 @@ Most mundane skills use the standard bonus ladder below.
 | Expert | Exceptional technique | +6 |
 | Master | Peak human craft | +8 |
 
-**Effective Skill = Relevant Attribute + Skill Bonus + Equipment Bonus + Circumstance Modifiers**
+### Effective Skill = Relevant Attribute + Skill Bonus + Equipment Bonus + Circumstance Modifiers
 
 If a character attempts to use a skill for which they have no training, they default to:
 
@@ -42,7 +42,7 @@ Spell modes do not use the mundane +0/+2/+4 ladder. They use tiers that explicit
 Any spell can be attempted at any time. Proficiency affects how dangerous and consistent that attempt is.
 
 | Tier | Magic Attempt Modifier | Instability | Exposure / Outcome Effect |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Untrained** | –4 | +2 instability | +1 EW and downgrade the result by one band |
 | **Practiced** | –1 | +1 instability | Clean success requires margin 4+; lower successes become success with distortion |
 | **Reliable** | +0 | baseline instability | Use the normal outcome bands from Section 7 |
@@ -57,7 +57,7 @@ This is the main answer to magic progression. Characters do not unlock new spell
 ### Combat Skills
 
 | Skill | Relevant Attribute | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Small Blades | DX | Daggers, shortswords, rapiers |
 | Swords | DX | Broadswords, longswords, sabers |
 | Axes | ST | Hatchets, battle axes, great axes |
@@ -73,7 +73,7 @@ This is the main answer to magic progression. Characters do not unlock new spell
 ### Physical Skills
 
 | Skill | Relevant Attribute | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Athletics | DX | Running, jumping, climbing |
 | Stealth | DX | Sneaking, hiding |
 | Acrobatics | DX | Balance, tumbling, recovering from Prone |
@@ -82,7 +82,7 @@ This is the main answer to magic progression. Characters do not unlock new spell
 ### Mental Skills
 
 | Skill | Relevant Attribute | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Arcane Lore | IQ | Understanding magic attempts, instability, and strange effects |
 | Tactics | IQ | Planning, ambush, terrain awareness |
 | Medicine | IQ | First aid, field treatment, diagnosis |
@@ -91,7 +91,7 @@ This is the main answer to magic progression. Characters do not unlock new spell
 ### Social Skills
 
 | Skill | Relevant Attribute | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Persuasion | WIL | Convincing, negotiating |
 | Intimidation | ST or WIL | Threatening, pressuring |
 | Leadership | WIL | Rally, morale support |
@@ -100,7 +100,7 @@ This is the main answer to magic progression. Characters do not unlock new spell
 ### Spell Proficiencies
 
 | Spell | Relevant Attribute | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Force | IQ | Motion, pressure, impact |
 | Fire | IQ | Heat, ignition, denial |
 | Veil | IQ | Concealment, masking, uncertainty |
@@ -138,7 +138,7 @@ Recommended baseline:
 ### Character Profile Dimensions
 
 | Dimension | What It Shapes | Practical Starting Effect |
-|---|---|---|
+| --- | --- | --- |
 | **Physical Execution** | Bodily force, weapon control, movement confidence | Supports combat and physical skills, heavy weapon use, and decisive movement |
 | **Magical Control** | Stability and clarity when shaping reality | Supports Reliable spells, techniques, and lower-distortion attempts |
 | **Cognitive Control** | Timing, awareness, reaction discipline | Supports RS, perception, tactical reads, and interruption play |
@@ -162,7 +162,7 @@ If a campaign wants tighter numbers, keep the same structure and reduce the tota
 Profile shaping works only if emphasis creates real constraints. Use the following linked trade rules during character creation:
 
 | Emphasis | Typical Gain | Required Tradeoff |
-|---|---|---|
+| --- | --- | --- |
 | **High commitment / output** | +1 damage or stronger force on a chosen action pattern | That pattern takes **+1 EW** |
 | **High magical control** | –1 instability on one chosen Reliable spell | Large-scale or exact attempts with that spell count one speed category slower |
 | **High cognitive control** | +1 RS or +1 to Perception/Tactics reads | Direct output from Force, Fire, or Rend is reduced by 1 when using that timing focus |
@@ -199,7 +199,7 @@ Default rule:
 Suggested starting techniques:
 
 | Spell | Techniques |
-|---|---|
+| --- | --- |
 | **Force** | **Push** (moderate scale, low precision), **Deflect** (reactive timing) |
 | **Fire** | **Flash** (short, bright burst), **Line Burn** (direct pressure across a lane) |
 | **Veil** | **Blur** (personal concealment), **Mask** (disguise or false read) |

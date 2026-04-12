@@ -16,7 +16,7 @@ Pressure functions the same way: it accumulates as a separate track, crosses thr
 
 When an attack hits, roll the weapon's damage dice, add the attacker's Damage Bonus (DB), then subtract the defender's **Total DR**:
 
-```
+```text
 Total DR = Natural DR + Armor DR
 Final Damage = max(0, Base Damage + DB − Total DR)
 ```
@@ -36,7 +36,7 @@ Assess each wound based on damage relative to the victim's maximum HP. See the t
 ## Wound Categories and Effects
 
 | Wound Category | Single-Hit Damage | State Effect |
-|---|---|---|
+| --- | --- | --- |
 | **Light Wound** | ≤ 10% of max HP | No immediate penalty. Contributes to Pressure gain. |
 | **Heavy Wound** | 10%–25% of max HP | –1 to all physical actions; may lose 1 SPD until treated; Pressure gain increased. |
 | **Severe Wound** | 25%–50% of max HP | –2 to actions; cannot Sprint; must test (CON or WIL) to take any major action; EW +1 on all physical actions. |
@@ -57,7 +57,7 @@ A stagger occurs when a single hit meets or exceeds 25% of max HP. A staggered c
 ## Critical Results
 
 | Roll | Result |
-|---|---|
+| --- | --- |
 | Natural 3 or 4 | Critical success: +50% damage or apply a special effect (disarm, knockdown, knockback). |
 | Natural 17 | Near-miss failure: attacker fails but no self-harm. |
 | Natural 18 | Critical failure: weapon jams, attacker falls Prone, or a nearby ally is inadvertently threatened. |
@@ -67,6 +67,7 @@ A stagger occurs when a single hit meets or exceeds 25% of max HP. A staggered c
 ## Death and Incapacitation
 
 When HP drops to 0 or below, the character must make a **Constitution check** (3d6 ≤ CON):
+
 - **Success:** The character remains conscious but enters a Critical Wound state with all associated restrictions.
 - **Failure:** The character is incapacitated and cannot act.
 
@@ -79,6 +80,7 @@ Additional failed checks at the GM's discretion may result in death. This ties m
 ### Field Treatment (During Combat)
 
 A character may use a **First Aid** action (Standard EW) to stabilize a wound. On a successful WIL + Medicine roll:
+
 - One Light Wound is stabilized (bleeding stops).
 - Serious or Critical Wounds cannot be healed in battle without a Vital attempt.
 
@@ -107,14 +109,14 @@ Pressure is a separate morale and stress track. It accumulates when a character 
 
 ### Pressure Resistance (PR)
 
-```
+```text
 PR = WIL + ⌊ CON / 2 ⌋
 ```
 
 Pressure is tracked as current PR remaining. As it depletes, the character crosses thresholds:
 
 | Threshold | Condition | Effect |
-|---|---|---|
+| --- | --- | --- |
 | Above ¾ PR | **Calm** | No penalty. |
 | Between ½ and ¾ PR | **Uneasy** | –1 to attack and defense checks. |
 | Between ¼ and ½ PR | **Shaken** | –2 to checks; may not use Commit action. |
@@ -123,6 +125,7 @@ Pressure is tracked as current PR remaining. As it depletes, the character cross
 ### Pressure Gain
 
 Pressure accumulates when:
+
 - The character is hit (especially by a Heavy or Critical Wound)
 - The character is flanked or surrounded
 - The character witnesses devastating events nearby
@@ -144,7 +147,7 @@ Each failed Pressure roll reduces current PR by the margin of failure. Each succ
 Conditions modify actions, RS, RB, and available reactions. Use these standardized terms consistently throughout all rules:
 
 | Condition | Effect |
-|---|---|
+| --- | --- |
 | **Stunned** | Cannot take complex actions. RB becomes 0. May only take the most basic defensive response if a rule explicitly allows it. |
 | **Prone** | Easier to hit in melee (+2 to attackers), harder to hit at range (–1 to attackers). Reduced SPD and restricted movement. Recovery costs +2 EW. |
 | **Grappled** | Limited movement; may not Dodge normally; may attempt to break free as a Slow action. |

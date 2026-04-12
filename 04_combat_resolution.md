@@ -55,7 +55,7 @@ Any such percentage is only a UI aid. It does not replace the opposed margin pro
 
 ### Finesse Melee
 
-```
+```text
 Attack Target = DX + Weapon Skill + weapon accuracy modifiers + state modifiers
 ```
 
@@ -63,7 +63,7 @@ Light, precise weapons (rapiers, daggers) rely on DX. These characters hit more 
 
 ### Heavy Melee
 
-```
+```text
 Attack Target = ST + Weapon Skill + weapon accuracy modifiers + state modifiers
 ```
 
@@ -71,7 +71,7 @@ A heavy weapon may impose a penalty when used by a character with low DX, but ST
 
 ### Ranged
 
-```
+```text
 Attack Target = DX + Missile Skill + Weapon Accuracy + Range Modifier + Aim Bonus + State Modifiers
 ```
 
@@ -79,7 +79,7 @@ Ranged attacks use Dexterity and missile skills. They apply range band modifiers
 
 ### Magic
 
-```
+```text
 Magic Attempt Target = IQ + Spell Proficiency + Focus Bonus − Parameter Difficulty + State Modifiers − Instability Penalties
 ```
 
@@ -90,7 +90,7 @@ See Section 7 (Magic) for the full attempt-driven magic model. Magic uses the sa
 ## Situational Attack Modifiers
 
 | Situation | Modifier |
-|---|---|
+| --- | --- |
 | Target is Evading (Guarded) | –1 to attacker |
 | Target is Committed (Engaged, open) | +1 to +2 |
 | Target is Prone (melee) | +2 |
@@ -121,7 +121,7 @@ Against **magic**, the declared intent, spell profile, and attempt parameters de
 Both attacker and defender roll 3d6. Outcomes:
 
 | Scenario | Result |
-|---|---|
+| --- | --- |
 | Attacker succeeds, defender fails | Full hit |
 | Both succeed | Compare margins; higher margin wins |
 | Attacker succeeds, defender succeeds by equal margin | Partial hit or graze at GM/implementation discretion |
@@ -159,7 +159,7 @@ Missile and thrown weapons use the same 3d6 engine as melee, but they interact w
 ### Range Bands and Modifiers
 
 | Range Band | Modifier |
-|---|---|
+| --- | --- |
 | Point-blank | +2 |
 | Near | +1 |
 | Medium | 0 |
@@ -170,11 +170,12 @@ Weapons define the farthest band they can attack effectively.
 
 ### Ranged Attack Formula
 
-```
+```text
 Ranged Attack Target = DX + Missile Skill + Weapon Accuracy + Range Modifier + Aim Bonus + Situation Modifiers
 ```
 
 Situation modifiers include:
+
 - target in cover
 - attacker moved this round
 - target moved unpredictably
@@ -188,7 +189,7 @@ Situation modifiers include:
 Ranged combat is governed by the same exposure-window model as melee.
 
 | Action | EW |
-|---|---|
+| --- | --- |
 | Quick thrown weapon | Fast (EW 2) |
 | Snap shot | Standard (EW 4) |
 | Normal bow or firearm shot | Standard (EW 4) |
@@ -209,7 +210,7 @@ Ranged defense shifts emphasis from active weapon defense to movement and enviro
 Suggested cover bonuses to defender target:
 
 | Cover Type | Bonus |
-|---|---|
+| --- | --- |
 | Light Cover | +1 |
 | Medium Cover | +2 |
 | Heavy Cover | +3 |
@@ -218,6 +219,7 @@ Suggested cover bonuses to defender target:
 ### Aim Mechanic
 
 A character may Aim instead of firing.
+
 - Each Aim action grants +1 Aim Bonus (stacks up to a default maximum of +2).
 - Aim is lost if the attacker must Dodge, is struck, becomes Suppressed, or changes target significantly.
 - Aiming increases EW, because the attacker is deliberately extending their preparation window.
@@ -236,6 +238,7 @@ AimState = {
 Ranged attacks may apply pressure even on a miss if the shot was dangerous and close enough to matter.
 
 On a near miss, the target may:
+
 - gain Pressure
 - lose an Aim stack
 - become Suppressed (cannot advance aggressively)
@@ -309,18 +312,23 @@ B's RS = DX 9 + ⌊IQ 9 / 2⌋ = 9 + 4 = **13**. A's EW = 4. Since 13 ≥ 4, B c
 ### Resolution — Archer A's Shot
 
 **A's Ranged Attack Target:**
-```
+
+```text
 DX (12) + Missile Skill (+2) + Acc (+2) + Range (0, Medium) + Aim Bonus (+2) + Wound Penalty (0) = 18 → clamp to 17
 ```
 
 **B's Defense (Dodge, only legal ranged defense; Parry and Block not applicable here):**
-```
+
+```text
 Dodge Target = 9 + DX (9) + Dodge Skill (0) − ranged penalty (2) − armor penalty (1) = 15
 ```
+
 But B is Committed (+2 EW means –1 to defensive targets):
-```
+
+```text
 Adjusted Dodge Target = 15 − 1 = 14
 ```
+
 Archer A rolls **11**, succeeding by margin **+6**.
 
 Swordsman B rolls **13**, succeeding by margin **+1**.
@@ -328,6 +336,7 @@ Swordsman B rolls **13**, succeeding by margin **+1**.
 Both succeed, so compare margins. Archer A wins the exchange by **5**, so the arrow hits despite B's attempted dodge.
 
 **Damage:**
+
 ```text
 Longbow damage = 1d6+1
 Damage roll = 5, so raw damage = 6
@@ -342,14 +351,17 @@ The shot lands, but armor and toughness soak most of it. B takes only 2 HP damag
 ### Resolution — Swordsman B's Attack
 
 **B's Melee Attack Target (Committed):**
-```
+
+```text
 ST (11) + Swords Skill (+4) + Committed bonus (+1) − Heavy Wound penalty (net 0 after WB) = 16
 ```
 
 **A's Defense (Dodge, melee — no ranged penalty):**
-```
+
+```text
 Dodge Target = 9 + DX (12) + Dodge Skill (0) − armor penalty (0) = 21 → clamp to 17
 ```
+
 B rolls **10**, succeeding by margin **+6**.
 
 A rolls **12**, succeeding by margin **+5**.
@@ -366,7 +378,8 @@ This example shows how melee and ranged tactics use the same pipeline while crea
 
 When presenting attack options, display intermediate calculations:
 
-**Shoot at Goblin (Medium Range)**
+### Shoot at Goblin (Medium Range)
+
 - Ranged Attack Target: 14
 - Goblin's Dodge Target: 10 (with –2 ranged penalty)
 - Cover bonus (Medium): +2 to the defender's effective defense target

@@ -18,7 +18,7 @@ When one group attempts to ambush another, or when a hidden enemy is suddenly re
 - **Defender (being ambushed):** 3d6 ≤ IQ + Perception Skill + situational modifiers
 
 | Situation | Modifier |
-|---|---|
+| --- | --- |
 | Attacker in dim light or foliage | +2 to Stealth |
 | Attacker in darkness | +4 to Stealth |
 | Attacker moving quickly | –2 to Stealth |
@@ -30,7 +30,7 @@ When one group attempts to ambush another, or when a hidden enemy is suddenly re
 ### Surprise Outcomes
 
 | Result | Effect |
-|---|---|
+| --- | --- |
 | Attacker succeeds, defender fails | **Full Surprise.** Defenders have RS = 0 and RB = 0 for the entire first round. They may not react to any action. |
 | Both succeed or both fail | **Alert.** No surprise. Combat begins normally. |
 | Defender succeeds, attacker fails | **Foiled ambush.** The ambushers begin round 1 **Off-Balance**. Defenders gain +2 RS against those attackers during the first round and may react normally to their exposure. |
@@ -41,14 +41,14 @@ When one group attempts to ambush another, or when a hidden enemy is suddenly re
 
 Outside of ambush situations, characters may notice hidden threats, traps, concealed passages, or approaching enemies with a **Perception check**:
 
-```
+```text
 Perception Target = IQ + Perception Skill + situational modifiers
 ```
 
 The GM sets a difficulty. Suggested target numbers:
 
 | Difficulty | Target | Examples |
-|---|---|---|
+| --- | --- | --- |
 | Easy | 12 | A poorly hidden goblin; a fresh blood trail |
 | Moderate | 10 | A deliberately concealed enemy; a disguised trap |
 | Hard | 8 | A professional ambush; a hidden door |
@@ -63,6 +63,7 @@ These are the *defender's* target numbers — lower means harder to notice (the 
 ### Short Rest (10 minutes)
 
 During a short rest, characters may:
+
 - Recover **FP** fully (Fatigue Points reset to maximum)
 - Reduce Pressure by up to **⌊PR / 4⌋** (natural decompression)
 - Apply First Aid to one Light Wound per character (stabilize bleeding, no HP gain)
@@ -72,6 +73,7 @@ A short rest requires no combat, no sprinting, and no major exertion. If interru
 ### Long Rest (1 hour)
 
 During a long rest, characters may:
+
 - Recover FP fully
 - Recover **HP** at a rate of **CON per hour** (i.e., one long rest restores CON HP)
 - Heal one **Light Wound** completely per character
@@ -95,6 +97,7 @@ Critical Wounds do not heal overnight without medical care or a Vital attempt.
 ### Encounter Victory
 
 An encounter ends when:
+
 - All enemies are **downed** (HP ≤ 0) or **incapacitated** (failed CON check)
 - All remaining enemies **flee** or **surrender** (GM discretion; enemies typically flee when their side reaches fewer than half their starting numbers, or when a leader is killed)
 - The party achieves its objective (escaping through a door, holding a position, etc.)
@@ -113,7 +116,7 @@ The party is **defeated** when all player characters are simultaneously downed o
 
 All creatures use the same attributes as player characters. A monster stat block includes:
 
-```
+```text
 Name: [Monster Name]
 ST:   [value]   DX:  [value]   CON: [value]
 IQ:   [value]   WIL: [value]
@@ -131,7 +134,7 @@ Tactics: [brief description of how this creature fights]
 
 ### Example Monster: Goblin Raider
 
-```
+```text
 Name: Goblin Raider
 ST: 7    DX: 11   CON: 8
 IQ: 8    WIL: 7
@@ -153,7 +156,7 @@ Tactics: Goblins prefer ambush (Stealth +2). They fight from range when possible
 
 ### Example Monster: Orc Warrior
 
-```
+```text
 Name: Orc Warrior
 ST: 14   DX: 10   CON: 13
 IQ: 8    WIL: 10
@@ -174,7 +177,7 @@ Tactics: Orcs advance directly and Commit on the first attack. They use their
 
 ### Example Monster: Dungeon Skeleton
 
-```
+```text
 Name: Dungeon Skeleton
 ST: 10   DX: 9    CON: 10
 IQ: 4    WIL: 12
@@ -202,7 +205,7 @@ Tactics: Skeletons advance and attack without tactics. They do not flee.
 Characters need light to act without penalty in enclosed environments.
 
 | Light Condition | Effect |
-|---|---|
+| --- | --- |
 | Full light (torches, daylight) | No penalty |
 | Dim light (distant torch, dawn) | –1 to Perception and ranged attacks |
 | Near darkness (moonlight, embers) | –2 to all attack and Perception targets |
@@ -213,7 +216,7 @@ Characters need light to act without penalty in enclosed environments.
 ### Terrain and Difficult Ground
 
 | Terrain | Effect |
-|---|---|
+| --- | --- |
 | Normal floor / open ground | No penalty |
 | Rubble, slippery, uneven | –1 SPD; Prone recovery EW +1 |
 | Water (wading, knee-deep) | –2 SPD; –1 to DX-based actions |
@@ -224,7 +227,7 @@ Characters need light to act without penalty in enclosed environments.
 ### Doors and Obstacles
 
 | Action | Roll | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Open an unlocked door | No roll | Costs movement; EW Standard (4) while doing so |
 | Break down a stuck door | 3d6 ≤ ST + Athletics | Each attempt costs 1 FP; on fail, door holds |
 | Pick a lock | 3d6 ≤ DX + Stealth/Thievery | Difficulty set by lock quality (target 12 to 6) |

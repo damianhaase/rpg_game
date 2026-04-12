@@ -54,7 +54,7 @@ The declared action begins. Each action now creates an **Exposure Window (EW)** 
 
 Any character with remaining RB may react if their Response Speed is high enough to exploit the acting character's Exposure Window.
 
-```
+```text
 Reaction is legal if:  RS + reaction modifiers ≥ EW
 ```
 
@@ -82,7 +82,7 @@ Every character has a **Response Speed (RS)**. If a reacting character's RS is h
 
 The governing check:
 
-```
+```text
 Reaction allowed if RS + reaction modifiers ≥ EW
 ```
 
@@ -95,7 +95,7 @@ This is **not a die roll** unless a specific talent or effect says otherwise. It
 Use these categories unless a weapon, spell, or trait changes them:
 
 | Category | EW | Examples |
-|---|---|---|
+| --- | --- | --- |
 | **Instant** | 0 | Purely internal or already-completed effects; generally not reactable. |
 | **Fast** | 2 | Jab, quick step, short dodge, snap shot at point-blank range. |
 | **Standard** | 4 | Normal attack, normal movement, standard bow shot, standard guard. |
@@ -109,7 +109,7 @@ Use these categories unless a weapon, spell, or trait changes them:
 Modify EW based on circumstances:
 
 | Modifier | EW Change |
-|---|---|
+| --- | --- |
 | Heavy weapon | +2 |
 | Fast weapon | –1 |
 | Unwieldy weapon | +1 |
@@ -124,7 +124,7 @@ Modify EW based on circumstances:
 ### Interaction with Commitment State
 
 | Commitment | EW Effect | Offense | Defense |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Balanced** | Normal EW | Normal | Normal defensive options |
 | **Guarded** | –1 EW | –1 to offensive targets | +1 to defensive targets |
 | **Committed** | +2 EW | +1 damage or equivalent offensive bonus | –1 to defensive targets |
@@ -151,32 +151,39 @@ Modify EW based on circumstances:
 ## Reaction Options
 
 A reaction is only legal if:
+
 - the acting enemy's EW is large enough to exploit (RS + modifiers ≥ EW),
 - the reacting character has enough RS,
 - the reacting character has enough remaining RB,
 - and the current state allows that reaction.
 
 ### Dodge
+
 **Cost: 1 RB**
 Use bodily movement to reduce the chance of being hit. Best for agile, lightly armored characters.
 
 ### Parry
+
 **Cost: 1 RB**
 Use a weapon to intercept or spoil an incoming melee attack. Moderate defense with modest offensive disruption.
 
 ### Block
+
 **Cost: 1 RB**
 Use a shield or body structure to absorb or stop an incoming attack. Best for strong characters with shields. Limited by facing and line of attack.
 
 ### Shift / Step
+
 **Cost: 1 RB**
 Small movement to alter angle, escape a line, or improve cover. Often used against Committed or Extended opponents.
 
 ### Counter
+
 **Cost: 2 RB**
 Exploit an opponent's large exposure window to strike back. Usually unavailable while Prone, Stunned, Broken, or using unwieldy equipment.
 
 ### Take Cover (reaction version)
+
 **Cost: 1 RB**
 A snap movement into existing nearby cover. Valid only when cover is plausibly present.
 
@@ -193,6 +200,7 @@ A snap movement into existing nearby cover. Valid only when cover is plausibly p
 ## Consequences of Reactions
 
 Reactions are not free. A reaction can:
+
 - consume RB
 - reduce the quality of the original declared action
 - increase pressure
@@ -218,6 +226,7 @@ The following narrative example illustrates a 2v1 fight between a **Hero** and t
 Hero's RS is 12. Goblin B's EW is 4. Because Hero's RS ≥ EW, Hero may react to the flanking movement.
 
 UI shows:
+
 - **No Reaction:** Hero continues attacking Goblin A; Goblin B completes flanking freely.
 - **Shift to Guard:** Hero burns 1 RB; Goblin B's flanking is partially blocked; Hero's Attack Target drops by 2 but Goblin B is less threatening next round.
 - **Counter Goblin B:** Costs 2 RB; Hero turns and attacks Goblin B but drops attack on Goblin A entirely.
@@ -255,6 +264,7 @@ A character who is Engaged with a single opponent in front and has a second atta
 This timing model removes visible initiative from the player experience while preserving deterministic combat logic. Players commit to actions, expose themselves by degrees, and sometimes exploit those openings in others. Faster and smarter characters feel reactive because they *are* reacting within the same round — not because they won an abstract turn-order contest.
 
 The player experiences:
+
 1. Declaration
 2. Exposure
 3. Reaction

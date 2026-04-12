@@ -252,7 +252,7 @@ This creates a meaningful tank path instead of making armor universally optimal.
 ## Encumbrance Levels
 
 | Encumbrance Level | Maximum Load | SPD Effect | Notes |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Light** | ST × 5 kg | None | No penalty. |
 | **Medium** | ST × 10 kg | –1 SPD | –1 to defense checks. |
 | **Heavy** | ST × 15 kg | –2 SPD | –2 to defense checks; some reactions unavailable. |
@@ -263,7 +263,7 @@ This creates a meaningful tank path instead of making armor universally optimal.
 ## Resistances (Saving Throws)
 
 | Resistance | Formula | Usage |
-|---|---|---|
+| --- | --- | --- |
 | **Poison/Disease** | 3d6 ≤ CON + WIL | Resist toxins, illness, and drugs. |
 | **Magic/Enchantment** | 3d6 ≤ IQ + WIL | Resist spells that charm, control, or alter the mind. |
 | **Fear/Terror** | 3d6 ≤ WIL + ⌊CON/2⌋ | Resist fear effects; equals PR check. |

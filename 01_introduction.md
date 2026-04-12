@@ -146,7 +146,7 @@ The overall **Game Loop**:
 This rulebook is split into subject-oriented sections. Each section governs a self-contained slice of the system and opens with a preamble explaining how that subject connects to the probability engine.
 
 | File | Contents |
-|------|----------|
+| ------ | ---------- |
 | `01_introduction.md` | This document — design goals, core mechanic, structure |
 | `02_attributes_and_derived_stats.md` | Attributes, derived statistics, formulas (including natural DR, movement) |
 | `03_turn_structure_and_actions.md` | Rounds, exposure windows, actions, reactions, flanking, grapple, disengage |

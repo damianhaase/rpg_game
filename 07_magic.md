@@ -24,7 +24,7 @@ A spell name defines the **approach** used, not an exact predefined effect. A pl
 The canonical spell set is:
 
 | Spell | What It Manipulates |
-|---|---|
+| --- | --- |
 | **Force** | Motion, pressure, impact, directional momentum |
 | **Fire** | Heat, ignition, combustion, thermal denial |
 | **Veil** | Concealment, masking, misdirection, uncertainty |
@@ -84,7 +84,7 @@ These parameters define how difficult and exposed a magic attempt is. They can b
 ### Scale
 
 | Scale | Typical Scope | Difficulty | Instability |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Small** | One person, one object, one narrow lane | +0 | +0 |
 | **Moderate** | One zone, multiple bodies, one large object | –1 | +1 |
 | **Large** | Wide area, multiple zones, major structure | –3 | +2 |
@@ -92,7 +92,7 @@ These parameters define how difficult and exposed a magic attempt is. They can b
 ### Precision
 
 | Precision | Typical Demand | Difficulty | Distortion Risk |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Broad** | Push, obscure, burn, alarm, shove | +0 | Low |
 | **Directed** | Specific target, limb, gap, route | –1 | Moderate |
 | **Exact** | Fine shaping, selective effect, delicate restoration | –3 | High |
@@ -100,7 +100,7 @@ These parameters define how difficult and exposed a magic attempt is. They can b
 ### Speed
 
 | Speed | Exposure Window | Difficulty | Notes |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Deliberate** | Slow (EW 6) | +0 | Safest default |
 | **Standard** | Standard (EW 4) | –1 | Normal combat pacing |
 | **Rushed** | Fast (EW 2) | –3 | Highest interruption risk if it fails |
@@ -135,7 +135,7 @@ Each attempt adds instability as follows:
 ### Instability Bands
 
 | Band | Current Instability | Effect |
-|---|---|---|
+| --- | --- | --- |
 | **Low** | 0–2 | No extra penalty beyond the normal current-instability subtraction. |
 | **Medium** | 3–5 | Magic attempts suffer +1 EW. Successes by margin 0–1 become **success with distortion**. |
 | **High** | 6+ | Magic attempts suffer +2 EW. Successes by margin 0–2 become **success with distortion** and failures by 1–2 become **unintended effect** instead of partial effect. |
@@ -154,7 +154,7 @@ Instability usually falls to zero after the scene ends and the practitioner has 
 Magic does not use a binary success/failure model. Resolve the attempt by its final margin after all modifiers:
 
 | Margin Result | Outcome |
-|---|---|
+| --- | --- |
 | **Success by 3+** | **Clean success** |
 | **Success by 0–2** | **Success with distortion** |
 | **Fail by 1–2** | **Partial effect** |
@@ -193,7 +193,7 @@ There is no special-case combat handling for magic. If a mundane action can be i
 The declared intent and spell profile determine the appropriate defense:
 
 | Defense Type | When Used |
-|---|---|
+| --- | --- |
 | **Dodge** | Direct impact, projected force, sudden displacement |
 | **Block / Parry** | Only when the fiction supports intercepting the effect |
 | **Cover** | Veil, Fire spread, scattered pressure, indirect shaping |
